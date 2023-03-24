@@ -11,6 +11,7 @@
 		from(
 			select no, title, writer, writeDate, hit
 			from board
+			order by no desc
 		)
 	)
 	where rnum between 1 and 10

@@ -2,7 +2,7 @@
 <web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
-    version="4.0">
+    id="WebApp_ID" version="4.0">
 
 	<!-- The definition of the Root Spring Container shared by all Servlets 
 		and Filters -->
@@ -24,13 +24,12 @@
 		</servlet-class>
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
-			<param-value>/WEB-INF/spring/appServlet/servlet-context.xml
-			</param-value>
+			<param-value>/WEB-INF/spring/appServlet/servlet-context.xml</param-value>
 		</init-param>
-			<init-param>
-				<param-name>throwExceptionIfNoHandlerFound</param-name>
-				<param-value>true</param-value>
-			</init-param>
+		<init-param>
+			<param-name>throwExceptionIfNoHandlerFound</param-name>
+			<param-value>true</param-value>
+		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 
@@ -58,8 +57,11 @@
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
 	
-	<
-	
+	<!-- JSP 파일이 없는 경우 스프링의 404처리가 되지 않는다. 그래서 여기서 처리하도록 정해준다. -->
+	<error-page>
+		<error-code>404</error-code>
+		<location>/WEB-INF/views/error/404.jsp</location>
+	</error-page>
 	
 </web-app>
 

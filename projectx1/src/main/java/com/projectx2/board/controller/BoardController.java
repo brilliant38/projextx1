@@ -2,12 +2,15 @@ package com.projectx2.board.controller;
 
 import java.util.ArrayList;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.projectx2.board.service.BoardServiceImpl;
 import com.projectx2.board.vo.BoardVO;
 
 import lombok.extern.log4j.Log4j;
@@ -19,10 +22,14 @@ import lombok.extern.log4j.Log4j;
 @Log4j
 public class BoardController {
 	
+	@Autowired
+	private BoardServiceImpl service;
+	
 	@RequestMapping("/list.do")
-	public String list() {
+	public String list(Model model) {
 		log.info("게시판 리스트 입니다....................");
-		System.out.println(10/0);
+		//System.out.println(10/0);
+		model.addAttribute("list", service.list());
 		return "board/list";
 	}
 	

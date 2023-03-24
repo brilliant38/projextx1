@@ -7,9 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>게시판 리스트</h1>
-<div onclick='location="view.do?no=10&inc=1"'>10. 게시판입니다.  홍길동 2023.03.23 - 1000</div>
-<a href="write.do">글쓰기</a>
-<div>${list }</div>
+<h1>JSP 파일이 없습니다.</h1>
 </body>
 </html>

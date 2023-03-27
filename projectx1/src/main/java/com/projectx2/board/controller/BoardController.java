@@ -34,9 +34,10 @@ public class BoardController {
 	}
 	
 	@GetMapping("/view.do")
-	public String view(long no, int inc) { //get으로 넘긴 변수와 동일하게 받는다.
+	public String view(long no, int inc, Model model) { //get으로 넘긴 변수와 동일하게 받는다.
 		log.info("게시판 글보기 입니다....................");
 		log.info("no={"+ no + "}, inc={" + inc + "}");
+		model.addAttribute("vo",service.view(no, inc));
 		return "board/view";
 	}
 	
@@ -50,29 +51,35 @@ public class BoardController {
 	public String write(BoardVO vo) {
 		log.info("게시판 글쓰기 처리 입니다....................");
 		log.info(vo);
+		service.write(vo);
 		return "redirect:list.do";
 	}
 	
 	@GetMapping("/update.do")
-	public String updateForm() {
+	public String updateForm(long no, Model model) {
 		log.info("게시판 글수정 폼 입니다....................");
+		model.addAttribute("vo", service.view(no, 0));
 		return "board/update";
 	}
 	
 	@PostMapping("/update.do")
-	public String update() {
+	public String update(BoardVO vo) {
 		log.info("게시판 글수정 처리 입니다....................");
-		return "redirect:view.do?no=10&inc=1";
+		service.update(vo);
+		return "redirect:view.do?no="+ vo.getNo() +"&inc=0";
 	}
 	
 	@PostMapping("/delete.do")
 	//@RequestParam([name, defaultValue, required, value]) - 넘어오는 데이터의 이름이 변수와 다른경우 , 값이 넘어오지 않는 경우 기본 값. 필수항목, 값세팅
 	//여러개의 데이터를 받을 때 리스트로 받으면 클래스를 사용해야 한다.
 	//public String delete(long[] no) {//배열로 받으면 값을 여러개 받을 수 있음.
-	public String delete(@RequestParam("no") ArrayList<Long> no) {//List로 받으려면 어노테이션이 있어야 함.
+	//public String delete(@RequestParam("no") ArrayList<Long> no) {//List로 받으려면 어노테이션이 있어야 함.
+	public String delete(BoardVO vo) {//List로 받으려면 어노테이션이 있어야 함.
 		log.info("게시판 글삭제 처리 입니다....................");
 		//log.info(Arrays.toString(no));
-		log.info(no);
+		//log.info(no);
+		log.info(vo); // no, pw 확인
+		service.delete(vo);
 		return "redirect:list.do";
 	}
 	

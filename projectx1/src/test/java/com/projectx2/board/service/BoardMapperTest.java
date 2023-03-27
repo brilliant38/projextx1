@@ -8,6 +8,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.projectx2.board.mapper.BoardMapper;
 import com.projectx2.board.vo.BoardVO;
+import com.webjjang.util.PageObject;
 
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
@@ -23,7 +24,8 @@ public class BoardMapperTest {
 		@Test
 		public void testExist() {
 			log.info("\nmapper 리스트 테스트 -------------------------------");
-			log.info(mapper.list());
+			PageObject pageObject = new PageObject(1,10);
+			log.info(mapper.list(pageObject));
 		}
 		
 		@Test

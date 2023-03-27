@@ -1,24 +1,20 @@
-package com.projectx2.board.mapper;
+package com.projectx2.board.service;
 
 import java.util.List;
 
 import com.projectx2.board.vo.BoardVO;
 import com.webjjang.util.PageObject;
 
-public interface BoardMapper {
-	
+public interface BoardService {
+
 	public List<BoardVO> list(PageObject pageObject);
 	
-	public long getTotalRow(PageObject pageObject);
-	
-	public BoardVO view(long no);
+	public BoardVO view(long no, int inc);
 	
 	public int write(BoardVO vo);
 	
 	public int update(BoardVO vo);
 	
 	public int delete(BoardVO vo);
-
-	public int increase(long no);
-	
 }
+

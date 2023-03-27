@@ -30,7 +30,7 @@
 </head>
 <body>
 <div class="container">
-	<h3>게시판 글 보기</h2>
+	<h3>게시판 글 보기</h3>
 	
 	<table class="table">
 		<tbody>

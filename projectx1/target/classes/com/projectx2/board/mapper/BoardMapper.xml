@@ -14,7 +14,12 @@
 			order by no desc
 		)
 	)
-	where rnum between 1 and 10
+	where rnum between #{startRow} and #{endRow}
+	</select>
+	
+	<select id="getTotalRow" resultType="Long">
+	select count(*)
+	from board
 	</select>
 	
 	<select id="view" resultType="com.projectx2.board.vo.BoardVO">

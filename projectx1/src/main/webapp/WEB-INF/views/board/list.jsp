@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="pageNav" tagdir="/WEB-INF/tags" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -54,6 +55,7 @@
 		</tbody>
 	</table>
 	<a href="write.do" class= "btn btn-default">글쓰기</a>
+	<div><pageNav:pageNav listURI="list.do" pageObject="${pageObject }"/></div>
 </div>
 </body>
 </html>

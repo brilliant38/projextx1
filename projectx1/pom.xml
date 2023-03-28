@@ -186,7 +186,14 @@
 			<!-- lombok lib를 설치하면 오류가 난다. 해결 : 프로퍼트 등록 해준다. lib 폴더에 넣지 않으면 war 파일 생성 시 제외 된다.-->
 			<systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/pageObject.jar</systemPath>
 		</dependency>
-
+		
+		<!-- sitemesh : 전체 레이아웃 잡기 -->
+		<dependency>
+			<groupId>opensymphony</groupId>
+			<artifactId>sitemesh</artifactId>
+			<version>2.4.2</version>
+		</dependency>
+		
 	</dependencies>
 	<build>
 		<plugins>

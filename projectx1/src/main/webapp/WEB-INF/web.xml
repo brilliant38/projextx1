@@ -57,6 +57,17 @@
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
 	
+		<!-- sitemesh filter - 전체 레이아웃 -->
+	<filter>
+		<description>사이트에 레이아웃을 잡는 필터 처리</description>
+		<filter-name>sitemesh</filter-name>
+		<filter-class>com.opensymphony.sitemesh.webapp.SiteMeshFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>sitemesh</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+	
 	<!-- JSP 파일이 없는 경우 스프링의 404처리가 되지 않는다. 그래서 여기서 처리하도록 정해준다. -->
 	<error-page>
 		<error-code>404</error-code>

@@ -10,6 +10,8 @@ public interface BoardMapper {
 	public List<BoardVO> list(PageObject pageObject);
 	
 	public long getTotalRow(PageObject pageObject);
+
+	public int increase(long no);
 	
 	public BoardVO view(long no);
 	
@@ -19,6 +21,5 @@ public interface BoardMapper {
 	
 	public int delete(BoardVO vo);
 
-	public int increase(long no);
 	
 }

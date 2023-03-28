@@ -34,6 +34,13 @@ public class BoardController {
 		return "board/list";
 	}
 	
+	@RequestMapping("/list2.do")
+	public String list2() {
+		log.info("게시판 리스트2 입니다....................");
+		//System.out.println(10/0);
+		return "board/list2";
+	}
+	
 	@GetMapping("/view.do")
 	public String view(long no, int inc, Model model) { //get으로 넘긴 변수와 동일하게 받는다.
 		log.info("게시판 글보기 입니다....................");

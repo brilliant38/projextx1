@@ -94,7 +94,7 @@ public class RestSampleController {
 		
 		//비정상, 정상 확인후 body는 뭔지 모름
 		if(height < 150) {
-			result = ResponseEntity.status(10001).body(vo);
+			result = ResponseEntity.status(HttpStatus.BAD_GATEWAY).body(vo);
 		} else {
 			result = new ResponseEntity<BoardVO>(vo, HttpStatus.OK);
 		}

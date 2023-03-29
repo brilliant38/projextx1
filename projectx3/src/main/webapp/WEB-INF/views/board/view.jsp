@@ -1,0 +1,83 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+  
+  <style type="text/css">
+  	#deleteDiv{
+  		display: none;
+  	}
+  </style>
+  <!-- reply 객체를 가져오기 -->
+  <script type="text/javascript" src="/js/reply.js"></script>
+  
+  <script type="text/javascript">
+	$(function(){
+
+		console.log(replyService);
+		
+		$('#deleteBtn').click(function(){
+				//alert("삭제 버튼 클릭");
+				$('#deleteDiv').slideDown();
+			});
+		$("#cancelBtn").click(function(){
+				$('#deleteDiv').slideUp();
+			});
+		});
+  </script>
+</head>
+<body>
+<div class="container">
+	<h3>게시판 글 보기</h3>
+	
+	<table class="table">
+		<tbody>
+			<tr>
+				<th>글번호</th>
+				<td>${vo.no }</td>
+			</tr>
+			<tr>
+				<th>제목</th>
+				<td>${vo.title }</td>
+			</tr>
+			<tr>
+				<th>내용</th>
+				<td>${vo.content }</td>
+			</tr>
+			<tr>
+				<th>작성자</th>
+				<td>${vo.writer }</td>
+			</tr>
+			<tr>
+				<th>작성일</th>
+				<td><fmt:formatDate pattern="yyyy-MM-dd" value="${vo.writeDate }"/></td>
+			</tr>
+			<tr>
+				<th>조회수</th>
+				<td><fmt:formatNumber pattern="#,###" value="${vo.hit }" /></td>
+			</tr>
+		</tbody>
+	</table>
+	
+	<a href="update.do?no=${vo.no }" class="btn btn-default">수정</a>
+	<a href="#" class="btn btn-default" onclick="return false" id="deleteBtn">삭제</a>
+	<a href="list.do" class="btn btn-default">리스트</a>
+	<div id= "deleteDiv">
+	<form action="delete.do" method="post">
+		<input name="no" value="${vo.no }" type="hidden">
+		<div class="form-group">
+			<label>본인 확인용 비밀번호 입력 :</label>
+			<input name="pw" class="form-control" type="password">
+		</div>
+		<button class="btn btn-danger btn-sm">삭제</button>
+		<button class="btn btn-warning btn-sm" type="button" id="cancelBtn">취소</button>
+	</form>
+	</div>
+</div>
+</body>
+</html>

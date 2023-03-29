@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="com.projectx3.boardreply.mapper.BoardReplyMapper">
+	<select id="list"
+		resultType="com.projectx3.boardreply.vo.BoardReplyVO"> 
+		select rno, reply, replyer, replyDate, updateDate
+			from (
+				select rownum rnum, rno, reply, replyer, replyDate, updateDate
+				from (
+					select rno, reply, replyer, replyDate, updateDate
+						from board_reply
+						where no = #{no}
+						order by rno desc
+			)
+		)
+		<!-- map 안에 no, pageObject가 있음. -->
+		where rnum between #{pageObject.startRow} and #{pageObject.endRow};
+	</select>
+
+	<select id="getTotalRow" resultType="Long">
+		select count(*)
+		from board_reply
+		where no = #{no}
+	</select>
+
+	<insert id="write">
+	insert into board_reply(rno, no, reply, replyer)
+	values(board_reply_seq.nextval, #{no}, #{reply}, #{replyer})
+	</insert>
+
+	<update id="update">
+	update board_reply set reply = #{reply}
+	where rno = #{rno}
+	</update>
+
+	<delete id="delete">
+	delete from board_reply
+	where rno = #{rno}
+	</delete>
+
+</mapper>

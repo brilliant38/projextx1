@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>게시판 리스트</title>
+<title>게시판 리스트</title>	
 	<style type="text/css">
 	.dataRow:hover{
 		background: #e8e8e8;
@@ -21,6 +21,8 @@
 		<c:if test="${msg !=null && msg != ''}">
 			alert("${msg}");
 		</c:if>
+
+		
 		
 		//alert("loading");
 		$(".dataRow").click(function(){

@@ -18,9 +18,9 @@
 	<script type="text/javascript">
 	$(function(){
 
-		<c:if test="${msg !=null && msg != ''}">
+	/* 	<c:if test="${msg !=null && msg != ''}">
 			alert("${msg}");
-		</c:if>
+		</c:if> */
 
 		
 		

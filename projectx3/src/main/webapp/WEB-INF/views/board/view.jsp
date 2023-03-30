@@ -1,13 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-
-
+<title>게시판 글 보기</title>
 <style type="text/css">
 #deleteDiv {
 	display: none;
@@ -27,9 +26,11 @@
 
 		var no = ${vo.no};
 		var replyUL = $(".chat");
+		
+		showList(1)
 
 		//사용 시점 - 게시판 글 보기 보여주는 처음 시점, 댓글 등록 후, 댓글 수정 후, 댓글 삭제 후 계속 리스트 새로 고침해야 신규 댓글 목록이 나옴. -> 함수로 만들어서 호출 시키는게 편함
-		function showList.(page){
+		function showList(page){
 			//replyService.list() 테스트
 			replyService.list(
 				//넘어가는 데이터
@@ -66,14 +67,62 @@
 				}
 			);
 		};
+
+		//게시판 글보기 이벤트 처리
 		$('#deleteBtn').click(function(){
 				//alert("삭제 버튼 클릭");
 				$('#deleteDiv').slideDown();
-			});
+		});
+		
 		$("#cancelBtn").click(function(){
 				$('#deleteDiv').slideUp();
-			});
 		});
+
+		//모달 창을 보이게 - 댓글 등록 버튼 : 댓글 제목 오른쪽 버튼
+		$("#replyWriteBtn").click(function(){
+			//댓글 모달창 제목 바꾸기
+			$("replyModalTitle").text("댓글 등록 모달");
+
+			//댓글 번호 숨김
+			$("#rnoDiv").hide();
+
+			//필요 없는 버튼
+			$("#modalUpdateBtn,#modalDeleteBtn").hide();
+
+			//필요한 버튼 - 등록 표시
+			$("#modalWriteBtn").show();
+				alert("댓글 등록 처리")
+				
+				//데이터 수집해서 replyService.write()에 보낸다.
+				var reply = {no : no, reply : $("#reply").val()};
+
+				//replyService.write(JSON, function(), function())로 보낸다.
+				replyService.write(
+					reply,
+					function(result){
+						//1. 사용자에게 메시지 전달
+						if(result) alert(decodeURI(result.replaceAll("+"," ")));
+						else alert("댓글 등록이 되었습니다.");
+						//2. 모달 창을 닫는다.
+						$("#replyModal").modal("hide");
+						//3. 댓글 리스트를 갱신한다.
+						showList(1);
+					}
+				);
+
+			//모달 창을 보이게 하자.
+			$("#replyModal").modal("show");
+		});
+	});
+
+	//댓글 등록의 처리 버튼 - 모달 창에 있는 버튼
+	$("#modalWriteBtn").click(function(){
+		alert("댓글 등록 처리");
+
+		//모달 창을 안 보이게 하자.
+		$("#replyModal").modal("hide");
+	
+	});
   </script>
 </head>
 <body>
@@ -132,7 +181,7 @@
 			<div class="card">
 				<div class="card-header">
 					<i class="fa fa-comments fa-fw"></i> Reply
-					<button id="ReplyWriteBtn" class="btn btn-primary btn-sm float-right">댓글 입력</button>
+					<button id="replyWriteBtn" class="btn btn-primary btn-sm float-right">댓글 입력</button>
 				</div>
 				<div class="card-body">
 					<!-- 댓글을 출력하는 UL - 데이터 한 개당 li태그 한개 -->
@@ -160,14 +209,14 @@
 
 				<!-- Modal Header -->
 				<div class="modal-header">
-					<h4 class="modal-title">Reply Modal</h4>
+					<h4 class="modal-title" id="replyModalTitle">Reply Modal</h4>
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
 				</div>
 
 				<!-- Modal body form tag는 만들지 않고 데이터 수집용으로만 input, textarea, select 태그 사용
 					 - 등록 : 댓글 내용. 수정 댓글 번호(보이게), 댓글 내용 -->
 				<div class="modal-body">
-					<div class="form-group">
+					<div class="form-group" id="rnoDiv">
 						<label>댓글 번호</label>
 						<input name="rno" id="rno" class="form-control" readonly="readonly" >
 					</div>
@@ -176,7 +225,7 @@
 						<textarea rows="5" class="form-control" name="reply" id="reply"></textarea>
 					</div>
 				</div>
-
+				
 				<!-- Modal footer -->
 				<div class="modal-footer">
 					<button type="button" class="btn btn-primary" id="modalWriteBtn">등록</button>

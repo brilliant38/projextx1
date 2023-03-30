@@ -12,7 +12,7 @@
   		var page = param.page;
   		//ajax 시작 - $.getJSON(url, function).fail(function);
   		$.getJSON(
-  			"boardreply/list.do?page=" + page + "&no=" + no, //url
+  			"/boardreply/list.do?page=" + page + "&no=" + no, //url
   			function(data){ //function
   				//성공하면 실행 할 함수가 있다면 실행하자.
   				if(callback){
@@ -36,9 +36,48 @@
   		;
   	}
   	
+  	//write()
+  	//reply = {reply:"~~~"}
+  	function write(reply, callback, error){
+  		console.log("write Reply...................");
+  		console.log("reply = " + JSON.stringify(reply));
+  		
+  		//서버로 데이터를 보내서 댓글 등록 시킨다.
+  		$.ajax({
+  			url : "/boardreply/write.do",
+  			type : "post",
+  			data : JSON.stringify(reply),
+  			contentType : "application/json; charset=utf-8",
+  			success : function(result, status, xhr){
+  				//아래 3가지 처리를 전달 받은 함수에 넣어서 처리하자.
+  				//사용자에게 메시지 전달.
+  				//모달 창을 닫기
+  				//댓글 리스트를 다시 불러와야 한다.
+  				if(callback){
+  					callback(result);
+  				}else{
+  					alert("성공적으로 댓글 등록이 되었습니다.");
+  					console.log(result);
+  				}
+			},
+			//서버에 오류가 있을 때 실행 되는 함수.
+			error : function(xhr, status, er){
+				console.log(xhr);
+				console.log(status);
+				console.log(er);
+				if(error){
+					error();
+				}else{
+					alert("댓글 등록에 실패했습니다.");
+				}
+			}
+  		});
+  	}
+  	
 	return {
   		// 함수 리턴
-  		list:list //실행 방법 replyService.list()
+  		list:list, //실행 방법 replyService.list()
+  		write:write //실행 방법 replyService.write()
 	};
 	
  })(); //JSON 객체 선언하는 방법.

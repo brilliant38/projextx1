@@ -31,13 +31,17 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+<!-- 	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 		<beans:property name="defaultEncoding" value="utf-8" />
 		<beans:property name="maxUploadSize" value="104857560" />
-		<beans:property name="maxUploadSizePerFile" value="104857560" />
+		<beans:property name="maxUploadSizePerFile" value="104857560" /> -->
 		<!-- 전달되는 파일이 일정 용량보다 커지면, 임시폴더 안에 임시파일을 만들어서 사용하게 된다. 1M보다 작으면 메인 메모리를 사용한다. -->
-		<beans:property name="uploadTempDir" value="file:/c:/upload/tmp" />
+<!--  	<beans:property name="uploadTempDir" value="file:/c:/upload/tmp" />
 		<beans:property name="maxInMemorySize" value="10485756" />
+		</beans:bean> --> 
+	
+	<!-- 파일 업로드의 설정은 web.xml의 servlet 태그안에 multipart-config 태그안에 작성했다. -->
+	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.support.StandardServletMultipartResolver" >
 	</beans:bean>
 	
 	<context:component-scan base-package="com.projectx3" />

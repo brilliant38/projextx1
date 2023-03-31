@@ -31,6 +31,12 @@
 			<param-value>true</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
+		<multipart-config>
+			<location>c:\\upload\\tmp</location>
+			<max-file-size>1048575600</max-file-size> <!-- 약 100MB 정도 -->
+			<max-request-size>10485756000</max-request-size> <!-- 약 1GB 정도 -->
+			<file-size-threshold>20971520</file-size-threshold>
+		</multipart-config>
 	</servlet>
 
 	<servlet-mapping>

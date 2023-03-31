@@ -244,7 +244,14 @@ ul.chat > li:hover{
 		
 		//댓글 페이지네이션 이벤트 처리
 		$("#replyPageDiv").on("click","ul>li", function(){
-			alert("댓글 페이지 클릭");
+			//alert("댓글 페이지 클릭");
+			page = $(this).text();
+			//alert(page);
+/* 			if(!$(this).hasClass("active")) 
+				alert("현재 페이지 입니다.");
+			else alert("현재 페이지가 아닙니다.");
+ */			if(!$(this).hasClass("active")) 
+				showList(page);
 			return false; //페이지 이동 취소
 		});
 		

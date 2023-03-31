@@ -11,34 +11,57 @@
 #deleteDiv {
 	display: none;
 }
+ul.chat > li:hover{
+	background: #ddd;
+	cursor: pointer;
+}
 </style>
 <!-- reply 객체를 가져오기 -->
 <script type="text/javascript" src="/js/reply.js"></script>
 
 <script type="text/javascript">
 	$(function(){
+		
 
-		/* <c:if test="${msg !=null}">
+		<c:if test="${msg !=null}">
 			$("#messageModal").modal("show");
-		</c:if> */
+		</c:if> 
 		
 		console.log(replyService);
+		
+		//Data객체의 댓글 List 확인
+		replyService.list(
+			//넘어가는 데이터
+			{page:1, no:${vo.no}},
+			function(data){
+				//alert(data);
+				var list = data.list;
+			/* 	for(var i=0, len=list.length; i<len; i++){
+					console.log(list[i]);
+				} */
+			}
+		);
+		
 
 		var no = ${vo.no};
 		var replyUL = $(".chat");
+		var replyPageFooter = $("#replyPageDiv");
 		
-		showList(1)
+		var page = 1;
+		
+		showList(page)
 
 		//사용 시점 - 게시판 글 보기 보여주는 처음 시점, 댓글 등록 후, 댓글 수정 후, 댓글 삭제 후 계속 리스트 새로 고침해야 신규 댓글 목록이 나옴. -> 함수로 만들어서 호출 시키는게 편함
 		function showList(page){
 			//replyService.list() 테스트
 			replyService.list(
 				//넘어가는 데이터
-				{page:1, no:no},
+				{page:page, no:no},
 				//성공했을때의 함수 - callback 함수
 				function(data){
 					//alert(data);
 					var list = data.list;
+					var pageObject = data.pageObject;
 
 					//추가 해야할 li 태그들을 저장하는 변수 선언
 					var str = "";
@@ -64,10 +87,27 @@
 					}
 
 					replyUL.html(str);
-				}
-			);
+					
+					//페이지네이션 코드 작성하기 - pageObject를 사용해서
+					str = "";
+					str+= "<ul class='pagination'>";
+					str+= "<li class='page-item ";
+					if(pageObject.startPage == 1) str+= "disabled"; //1페이지에서는 이전페이지 버튼 사용 불가
+					str+="'><a class='page-link' href='#''>Previous</a></li>";
+					for(var i=pageObject.startPage; i <= pageObject.endPage; i++){
+						str+="<li class='page-item ";
+						if(page == i) str+= "active";
+						str+="'><a class='page-link' href='#'>"+i+"</a></li>";
+					}
+					str+="<li class='page-item ";
+					if(pageObject.endPage == pageObject.totalPage) str+= "disabled"; //마지막 페이지에서는 다음페이지 버튼 사용불가
+					str+="'><a class='page-link' href=''#''>Next</a></li>";
+					str+= "</ul>"
+					//댓글 페이지네이션 출력
+					replyPageFooter.html(str);
+				});
 		};
-
+		
 		//게시판 글보기 이벤트 처리
 		$('#deleteBtn').click(function(){
 				//alert("삭제 버튼 클릭");
@@ -81,7 +121,7 @@
 		//모달 창을 보이게 - 댓글 등록 버튼 : 댓글 제목 오른쪽 버튼
 		$("#replyWriteBtn").click(function(){
 			//댓글 모달창 제목 바꾸기
-			$("replyModalTitle").text("댓글 등록 모달");
+			$("#replyModalTitle").text("댓글 등록 모달");
 
 			//댓글 번호 숨김
 			$("#rnoDiv").hide();
@@ -91,6 +131,15 @@
 
 			//필요한 버튼 - 등록 표시
 			$("#modalWriteBtn").show();
+			
+			// 데이터 지우기
+			$("#reply").val("");
+			
+			//모달 창을 보이게 하자.
+			$("#replyModal").modal("show");
+		});
+			//댓글 등록에 처리 버튼 - 모달 창에 있는 버튼
+			$("#modalWriteBtn").click(function(){
 				alert("댓글 등록 처리")
 				
 				//데이터 수집해서 replyService.write()에 보낸다.
@@ -100,29 +149,107 @@
 				replyService.write(
 					reply,
 					function(result){
-						//1. 사용자에게 메시지 전달
-						if(result) alert(decodeURI(result.replaceAll("+"," ")));
-						else alert("댓글 등록이 되었습니다.");
-						//2. 모달 창을 닫는다.
-						$("#replyModal").modal("hide");
-						//3. 댓글 리스트를 갱신한다.
+						//1. 댓글 리스트를 다시 가져와 표시한다.
 						showList(1);
-					}
-				);
+						//2. 사용자에게 메시지 전달
+						/* if(result) alert(decodeURI(result.replaceAll("+"," ")));
+						else alert("댓글 등록이 되었습니다.");
+						$("#replyModal").modal("hide"); */
+						if(result) $("#messageModal").find(".modal-body").text(result);
+						else $("#messageModal").find(".modal-body").text("댓글 등록이 되었습니다.");
+						$("#messageModal").modal("show");
+						//3. 모달 창을 닫는다.
+						$("#replyModal").modal("hide");
+				}
+			);
 
-			//모달 창을 보이게 하자.
+			//모달 창을 안보이게 하자.
+			$("#replyModal").modal("hide");
+		}); //댓글 등록 처리의 끝
+		
+		// 댓글을 클릭하면 동작되는 이벤트
+		// 댓글 한개는 나중에 처리되서 나타난 내용에 해당된다.
+		// 댓글 전체는 처음부터 있었다. 있는 전체에 이벤트 처리 ->on(이벤트, 선택한 객체 안에서 찾을 객체, 함수)
+		$("ul.chat").on("click","li",function(){
+			//alert("댓글 한 개 클릭");
+			//데이터 수집
+			//클릭한 태그 안에 data안의 rno=284인 것을 찾아와
+			var rno = $(this).data("rno");
+			var reply = $(this).find("p").text();
+			
+			//alert("rno= " + rno + ", reply= " + reply);
+			
+			//모달에 데이터 세팅
+			$("#rno").val(rno);
+			$("#reply").val(reply);
+			
+			//모달 창 제목 바꾸기
+			$("#replyModalTitle").text("댓글 수정 / 삭제 모달 창");
+			
+			// 모달 처리 버튼
+			$("#modalWriteBtn").hide();
+			$("#modalUpdateBtn, #modalDeleteBtn").show();
+			
+			// 댓글 번호 보여지게
+			$("#rnoDiv").show();
+			
+			//모달 보여주기
 			$("#replyModal").modal("show");
 		});
-	});
+		
+		//모달 창 안에 수정 버튼 이벤트
+		$("#modalUpdateBtn").click(function(){
+			//alert("댓글 수정 처리 진행.");
+			//데이터 수집 - rno, reply
+			var reply = {rno:$("#rno").val(), reply:$("#reply").val()};
+			
+			replyService.update(reply, function(result){
+				// 수정이 성공 되면 처리내용
+				// 1. 리스트 데이터를 다시 가져와서 표시한다.
+				showList(page);
+				// 2. 모달창을 닫는다.
+				$("#replyModal").modal("hide");
+				// 3. 메시지 모달창에 데이터 세팅하고 보여준다.
+				if(result) {$("#messageModal").find(".modal-body").text(result);}
+				else {$("#messageModal").find(".modal-body").text("댓글 수정이 되었습니다.");}
+				$("#messageModal").modal("show");
+				
+			});
+		});//모달 창 안에 수정 버튼 이벤트 끝
+		
+		//모달 창 안에 삭제 버튼 이벤트
+		$("#modalDeleteBtn").click(function(){
+			//alert("댓글 삭제 처리 진행.");
+			
+			//데이터 수집
+			var rno = $("#rno").val();
+			
+			replyService.delete(rno);
+			
+			replyService.delete(rno, function(result){
+			// 삭제 성공 되면 처리내용
+			// 1. 리스트 데이터를 다시 가져와서 표시한다.
+			page = 1;
+			showList(page);
+			// 2. 모달창을 닫는다.
+			$("#replyModal").modal("hide");
+			// 3. 메시지 모달창에 데이터 세팅하고 보여준다.
+			if(result) {$("#messageModal").find(".modal-body").text(result);}
+			else {$("#messageModal").find(".modal-body").text("댓글 삭제가 되었습니다.");}
+			$("#messageModal").modal("show");
+		
+			});
 
-	//댓글 등록의 처리 버튼 - 모달 창에 있는 버튼
-	$("#modalWriteBtn").click(function(){
-		alert("댓글 등록 처리");
+		}); //모달 창 안에 삭제 버튼 이벤트 끝
+		
+		//댓글 페이지네이션 이벤트 처리
+		$("#replyPageDiv").on("click","ul>li", function(){
+			alert("댓글 페이지 클릭");
+			return false; //페이지 이동 취소
+		});
+		
+	}); //function() 끝
 
-		//모달 창을 안 보이게 하자.
-		$("#replyModal").modal("hide");
-	
-	});
   </script>
 </head>
 <body>
@@ -198,7 +325,11 @@
 					</ul>
 					<!-- 댓글을 출력하는 UL 끝-->
 				</div>
+				<div class="card-footer" id="replyPageDiv">
+				
+				</div>
 			</div>
+			<!-- Card 클래스의 끝 -->
 		</div>
 	</div>
 	

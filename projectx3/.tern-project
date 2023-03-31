@@ -15,6 +15,9 @@
     },
     "jquery-extension": {
       
+    },
+    "doc_comment": {
+      
     }
   },
   "libs": [

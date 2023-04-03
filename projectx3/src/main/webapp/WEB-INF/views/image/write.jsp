@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>이미지 등록 폼</title>
 </head>
 <body>
 	<div class="card shadow md-4">

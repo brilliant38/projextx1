@@ -41,7 +41,7 @@
 
 	<insert id="write">
 		<selectKey keyProperty="no" order="BEFORE" resultType="Long">
-			select multi_image_seq.nextval from dual;
+			select multi_image_seq.nextval from dual
 		</selectKey>
 		insert into multi_image(no, title, content, id)
 		values(#{no},

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.projectx3.image.mapper.ImageMapper">
+	<select id="list" resultType="com.projectx3.image.vo.ImageVO">
+		select no, title, id, writeDate, fileName
+		from(
+		select rownum rnum, no,
+		title, id, name, writeDate, fileName
+		from(
+		select mi.no, mi.title,
+		mi.id, m.name, mi.writeDate, mif.filename
+		from multi_image mi, member
+		m, multi_image_file mif
+		where (mif.president = 1) and (mi.no = mif.no
+		and m.id = mi.id)
+		order by no desc
+		)
+		)
+		<!-- getTotalRow() 호출해서 pageObject.setTotalRow()를 호출하지 않으면 계산불가로 데이터 가져올 
+			수 없음. -->
+		where rnum between #{startRow} and #{endRow}
+	</select>
+	<select id="getTotalRow" resultType="Long">
+		select count(*) from
+		multi_image
+	</select>
+	<select id="view" resultType="com.projectx3.image.vo.ImageVO">
+		select mi.no, mi.title, mi.content,
+		mi.id, m.name, mi.writeDate
+		from multi_image mi, member m
+		where (no =
+		1)and (mi.id = m.id)
+	</select>
+	<select id="viewFiles"
+		resultType="com.projectx3.image.vo.ImageFileVO">
+		select fno, fileName, president
+		from multi_image_file
+		where
+		no = #{no}
+	</select>
+
+	<insert id="write">
+		<selectKey keyProperty="no" order="BEFORE" resultType="Long">
+			select multi_image_seq.nextval from dual;
+		</selectKey>
+		insert into multi_image(no, title, content, id)
+		values(#{no},
+		#{title},#{content},#{id})
+	</insert>
+	<insert id="writeFile">
+		insert into multi_image_file(fno, no, fileName,
+		president)
+		values(multi_image_file_seq.nextval, #{no}, #{fileName},
+		#{president})
+	</insert>
+
+	<update id="update">
+		update multi_image set title = #{title}, content =
+		#{content}
+		where no = #{no}
+	</update>
+	<update id="updateFile">
+		update multi_image_file set fileName = #{fileName}
+		where fno = #{fno}
+	</update>
+	<update id="updateFileUnPresident">
+		update multi_image_file set president = 0
+		where no =#{no}
+	</update>
+	<update id="updateFilePresident">
+		update multi_image_file set president = 1
+		where fno = #{fno}
+	</update>
+
+	<delete id="delete">
+		delete from multi_image
+		where no = #{no}
+
+	</delete>
+	<delete id="deleteFile">
+		delete from multi_image_file
+		where fno = #{fno}
+	</delete>
+
+</mapper>

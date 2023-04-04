@@ -129,7 +129,42 @@ public class ImageController {
 		
 		int result = service.update(vo);
 		
+		return "redirect:view.do?no=" + vo.getNo() + 
+				"&page=" + pageObject.getPage() + 
+				"&PerpageNum=" +pageObject.getPerPageNum() +
+				"&key="+ pageObject.getKey() + 
+				"&word="+ pageObject.getWord();
+	}
+	
+	//이미지 게시판 이미지 바꾸기 처리
+	@PostMapping("/updateFile.do")
+	public String updateFile(ImageFileVO vo, String deleteFileName, MultipartFile changeFile, PageObject pageObject, RedirectAttributes rttr, HttpServletRequest request) throws Exception {
+		//이미지 정보, 변경 할 기존 이미지명, 새로 변경 될 이미지 명, 처리결과를 리다이렉트로 보낼 메시지 객체 , 요청정보의 객체
+		log.info("이미지 게시판 이미지 바꾸기 처리.............................");
 		
+		log.info("deleteFileName= " + deleteFileName);
+		
+		log.info("삭제 대상 파일명:" + deleteFileName + "..................................................");
+		
+		//1. 파일 업로드
+		vo.setFileName(FileUtil.upload(path, changeFile, request));
+		
+		//2. DB Update
+		int result = service.updateFile(vo); // 수정 완료시 1
+		
+		
+		//3. 원래 파일은 지운다.
+		if(result == 1) {
+			String realPath =FileUtil.getRealPath(deleteFileName, "", request);
+			log.info(realPath);
+			FileUtil.remove(realPath); //remove 메소드는 파일의 실제 경로가 필요함.
+			rttr.addFlashAttribute("msg", "첨부파일이 변경 되었습니다.");
+		} else {
+			rttr.addFlashAttribute("msg", "첨부파일이 변경 되지 않았습니다. 다시 확인해 주세요.");
+		}
+		
+		
+		//모든 처리가 끝나면 해당 글 번호로 가야한다. 가기 위해서는 아래 데이터들이 필요하다.
 		return "redirect:view.do?no=" + vo.getNo() + 
 				"&page=" + pageObject.getPage() + 
 				"&PerpageNum=" +pageObject.getPerPageNum() +

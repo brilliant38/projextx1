@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="pageNav" tagdir="/WEB-INF/tags" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,6 +12,9 @@
 .imageData img:hover{
 	border: 1px solid red;
 	cursor: pointer;
+}
+#changeFileDiv{
+	display: none;
 }
 </style>
 
@@ -24,7 +28,9 @@ $(function(){
 	$(".imageData").click(function(){
 		//alert("작은 이미지 클릭");
 		//필요한 데이터 수집
+		//변경한 이미지의 fno로도 세팅해야 한다.
 		var fno = $(this).data("fno");
+		$("#changeFno").val(fno);
 		var president = $(this).data("president");
 		var alt =  $(this).find("img").attr("alt");
 		var src =  $(this).find("img").attr("src");
@@ -33,7 +39,25 @@ $(function(){
 		//큰 이미지에 alt, src 정보를 넣어준다.
 		$("#bigImage").attr("alt",alt);
 		$("#bigImage").attr("src",src);
+		//fno 세팅
+		$("#bigImage").data("fno",fno);
+		//alert($("#bigImage").data("fno"));
 	});
+	
+	//이미지 바꾸기 버튼 클릭 시 적용 이벤트 -> 폼이 나타나야 한다.
+	$("#changeFileBtn").click(function(){
+		//큰 이미지의 data-fno의 값을 가져와서 변경 대상 fno에 세팅해준다.
+		$("#changeFno").val($("#bigImage").data("fno"));
+		$("#deleteFileName").val($("#bigImage").attr("src"));
+		$("#changeFileDiv").slideDown();
+	});
+	//취소 버튼 동작 지정
+	$("#cancelBtn").click(function(){
+		$("#changeFileDiv").slideUp();
+	});
+	
+	
+	
 });
 </script>
 </head>
@@ -83,12 +107,39 @@ $(function(){
 							</div>
 						</c:forEach>
 					</div>
+					<!-- 큰 이미지 처리 버튼 -->
+					<div class="row">
+						<div class="col-md-12">
+							<button class="btn btn-primary" id="changeFileBtn">이미지 바꾸기</button>
+						</div>
+					</div>
+					<!-- 이미지 바꾸기 폼 -->
+					<div class="row" id="changeFileDiv">
+						<div class="col-md-12">
+							<form action="updateFile.do" method="post" enctype="multipart/form-data">
+								<input type="hidden" name="no" value="${vo.no }">
+								<!-- 작은 이미지를 클릭하면 큰 이미지의 fno 세팅 -> jquery로 작업한다. -->
+								<input type="hidden" name="fno" id="changeFno" >
+								<input type="hidden" name="page" value="${param.page }">
+								<input type="hidden" name="perPageNum" value="${param.perPageNum }">
+								<input type="hidden" name="key" value="${param.key }">
+								<input type="hidden" name="word" value="${param.word }">
+								<input type="hidden" name="deleteFileName" >
+								<div class="form-group">
+									<label>변경할 이미지 선택: </label>
+									<input class="form-control" name="changeFile" type="file">
+								</div>
+								<button class="btn btn-primary">이미지 바꾸기</button>
+								<button class="btn btn-primary" type="button" id="cancelBtn">취소</button>
+							</form>
+						</div>
+					</div>
 					<!-- 큰 이미지 하나 보여주기. -->
 					<div class="row">
 						<div class="col-md-12 text-center">
 							<c:forEach items="${list }" var ="ifvo">
 								<c:if test="${ifvo.president == 1}">
-									<img alt="${ifvo.fileName }" src="${ifvo.fileName }" style="width:70%; border: 1px solid #888" class="img-thumbnail" id="bigImage">
+									<img alt="${ifvo.fileName }" src="${ifvo.fileName }" style="width:70%; border: 1px solid #888" class="img-thumbnail" id="bigImage" data-fno="${ifvo.fno }">
 								</c:if>
 							</c:forEach>
 						</div>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var person = {name: "홍길동", age: 20, arr:[1,2,3]};
+
+        //객체에 접근하는 첫번째 방법 .key
+        console.log(person.name);
+        console.log(person.arr[0]);
+        
+        //객체에 접근하는 두번째 방법 [key]
+        console.log(person["name"]);
+        console.log(person["arr"][0]);
+        
+        var exam = {math:50, eng:70, kor:90};
+        var kim = {name:"김길동", exam:exam};
+        
+        console.log(kim.name);
+        console.log(kim.exam["eng"]);
+
+        //배열과 객체를 조합할 수 있음
+        var arr = [
+            {id:1, title:"hi", content:"안녕하세요"},
+            {id:2, title:"bye", content:"안녕히계세요"}
+        ];
+
+        console.log(arr);
+        console.log(arr[0].content);
+
+    </script>
+</body>
+</html>l

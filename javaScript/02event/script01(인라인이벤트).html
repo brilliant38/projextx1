@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="check1()">인라인 이벤트</button>
+    
+    <button onclick="check2(this)">버튼1</button>
+    <button onclick="check2(this)">버튼2</button>
+    <button onclick="check2(this)">버튼3</button>
+    
+    <script>
+
+        //화면에서 나타나는 동작이나 동적인 기능. 클릭, 태그변경
+        //인라인 이벤트
+        //기본 이벤트
+        //표준 이벤트
+        function check1() {
+            alert('경고창')
+        }
+
+        function check2(a){
+            console.log(a);
+        }
+
+
+
+    </script>
+</body>
+
+</html>

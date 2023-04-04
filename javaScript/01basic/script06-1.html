@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = new Array('a','b','c','d','e');
+        //length - 길이
+        console.log(arr.length);
+        
+        //push 마지막에 추가
+        arr.push(100);
+        console.log(arr);
+        
+        //pop 마지막 요소 제거
+        arr.pop();
+        console.log(arr);
+
+        //unshift - 맨 앞에 추가
+        arr.unshift(200);
+        console.log(arr);
+        
+        //shift - 맨 앞 요소 제거
+        arr.shift();
+        console.log(arr);
+        
+        //splice 
+        arr.splice(1, 1);
+        console.log(arr); //1번째 요소에서 1개를 삭제
+        arr.splice(1,2);
+        console.log(arr); //1번째 요소에서 2개를 삭제
+        arr.splice(1,0,'park','kim', 'lee');
+        console.log(arr); //1번째 위치에 요소 추가
+        
+        //배열의 정렬
+        arr.sort();
+        console.log(arr); //오름차순
+        arr.reverse();
+        console.log(arr); //내림차순
+
+
+
+    </script>
+</body>
+</html>

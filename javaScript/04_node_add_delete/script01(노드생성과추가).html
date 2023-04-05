@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table {
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+
+        thead th,
+        tbody td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>교사</th>
+                <th>훈련과목</th>
+                <th>훈련내용</th>
+            </tr>
+        </thead>
+        <tbody class="todoList">
+            <tr>
+                <td><input type="text" size="3"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+        </tbody>
+    </table>
+    <button type="button" id="addList">1개 추가하기</button>
+    <button type="button" id="addLists">5개 추가하기</button>
+
+
+    <script>
+        var todoList = document.querySelector(".todoList");
+        var addList = document.getElementById("addList");
+        var addLists = document.getElementById("addLists");
+
+        //버튼 클릭 함수 호출
+        addList.addEventListener("click", createList);
+        addLists.addEventListener("click", createList2);
+
+        function createList() {
+            var tr = document.createElement("tr");
+            /* var td = document.createElement("td");
+            var input = document.createElement("input");
+            console.log(tr);
+
+
+            input.type = "text";
+            input.size = "3";
+
+            td.appendChild(input);
+            tr.appendChild(td);
+ */
+            var td = document.createElement("td");
+            td.innerHTML = "<input type='text' size='3'>";
+            tr.appendChild(td);
+            var td = document.createElement("td");
+            td.innerHTML = "<input type='text' '>";
+            tr.appendChild(td);
+            var td = document.createElement("td");
+            td.innerHTML = "<input type='text' '>";
+            tr.appendChild(td);
+
+            todoList.appendChild(tr);
+
+        }
+
+        function createList2() {
+            
+
+            for (var i = 1; i <= 5; i++) {
+                var tr = document.createElement("tr");
+                var td = document.createElement("td");
+                td.innerHTML = "<input type='text' size='3'>";
+                tr.appendChild(td);
+                var td = document.createElement("td");
+                td.innerHTML = "<input type='text' '>";
+                tr.appendChild(td);
+                var td = document.createElement("td");
+                td.innerHTML = "<input type='text' '>";
+                tr.appendChild(td);
+
+                todoList.appendChild(tr);
+            }
+
+        }
+    </script>
+</body>
+
+</html>

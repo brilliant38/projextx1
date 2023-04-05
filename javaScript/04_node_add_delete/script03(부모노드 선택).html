@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div>이전</div>
+        <div class="now">
+            <ul>
+                <li><a>목록1</a></li>
+                <li><a>목록2</a></li>
+                <li><a>목록3</a></li>
+            </ul>
+        </div>
+        <div></div>
+    </section>
+
+    <script>
+        var now = document.querySelector(".now");
+        
+        console.dir(now);
+        //부모 노드-> node는 아무 DOM 객체나 될 수 있다
+        console.log(now.parentNode);
+        //부모 요소 -> element는 HTML tag로 바로 특정할 수 있거나, id나 class 같은 속성을 가진 것
+        console.log(now.parentElement);
+        console.log(now.previousElementSibling); //이전 이웃노드
+        console.log(now.nextElementSibling);//다음 이웃노드
+        console.log(now.firstElementChild);//자식 노드중 처음
+        console.log(now.lastElementChild);//자식 노드중 마지막
+
+
+
+
+
+        
+    </script>
+</body>
+</html>

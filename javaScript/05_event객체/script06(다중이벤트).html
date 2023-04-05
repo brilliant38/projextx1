@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {border-collapse: collapse;}
+        thead th, tbody td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <th>번호</th>
+            <th>이름</th>
+            <th>내용</th>
+            <th>날짜</th>
+        </thead>
+        <tbody class="list">
+            <tr>
+                <td>1</td>
+                <td>홍길자</td>
+                <td>안녕하세요!</td>
+                <td><button type="button">삭제</button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>김길자</td>
+                <td>자바스크립트!</td>
+                <td><button type="button">삭제</button></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>이길자</td>
+                <td>노드 일괄 삭제!</td>
+                <td><button type="button">삭제</button></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>고길자</td>
+                <td>복습하세요!</td>
+                <td><button type="button">삭제</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        var tbody = document.querySelector(".list");
+        var list = tbody.querySelectorAll("td button");
+
+
+        for(var i=0; i<list.length; i++){
+            list[i].onclick = function(){
+                //console.log(event);
+                //console.log(arguments);
+                //console.log(arguments[0]);
+                //event.target은 이벤트 발생 대상 그 자체를 가리킨다.
+                console.dir(event.target.parentElement.parentElement);
+
+                event.target.parentElement.parentElement.remove();
+
+            }
+        }
+
+
+    </script>
+</body>
+</html>

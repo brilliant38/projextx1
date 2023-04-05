@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        window.onload = function(){
+            
+            var li = document.querySelector(".box1 ul li");
+            var btn1 = document.querySelector("#btn1");
+            btn1.onclick = function(){
+                li.innerHTML = "coding404"; //텍스트 값을 해당 노드에 직접 입력 가능
+            }
+
+            var list = document.querySelectorAll(".box2 ul li");
+            var btn2 = document.querySelector("#btn2");
+
+            btn2.onclick = function(){
+                for(var i=0; i<list.length; i++){
+                    list[i].innerHTML = "coding404"; //가져온 li노드 전체의 값을 변경
+                }
+            }
+
+        }
+
+    </script>
+
+    <!-- querySelector()-->
+    <button id="btn1">querySelector확인</button><br>
+    <div class="box1">
+        <ul>
+            <li>안녕</li>
+            <li>헬로</li>
+            <li>니하오</li>
+        </ul>
+    </div>
+    
+    <!-- querySelectorAll()-->
+    <button id="btn2">querySelectorAll확인</button><br>
+    <div class="box2">
+        <ul>
+            <li>홍길자</li>
+            <li>홍길순</li>
+            <li>김장군</li>
+        </ul>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="mainTitle">
+        <h3>영화리스트</h3>
+    </div>
+    <div class="movieList">
+        <!-------------------조작할 영역------------------------->
+        <!-- <div class="movie">
+            <img src="##"/>
+            <div class="inner">
+                <h3 class="title">제목</h3>
+                <h3 class="year">개봉일</h3>
+                <ul class="genres">
+                    <li>list1</li>
+                    <li>list2</li>
+                </ul>
+                <p class="summary">내용</p>
+            </div>
+        </div> -->
+        <!-------------------조작할 영역------------------------->
+    </div>
+    <script>
+
+        function ajax() {
+
+            fetch("https://yts.mx/api/v2/list_movies.json?sort_by=year&order_by=desc").then(function (response) {
+                //console.log(response);
+                if (response.status != 200) {
+                    alert("서버와 통신에 실패했습니다.");
+                } else {
+                    return response.json();
+                }
+            }).then(function (jsonData) {
+                //console.log(jsonData);
+                var movies = jsonData.data.movies;
+
+                var tag = "";
+
+                for (var i = 0; i < movies.length; i++) {
+                    var title = movies[i].title;
+                    var year = movies[i].year;
+                    var img = movies[i].medium_cover_image;
+                    var summary = movies[i].summary;
+                    var genres = movies[i].genres;
+                    //console.log(title, year, img, summary, genres);
+
+                    tag += '<div class="movie">';
+                    tag += '<img src="'+ img +'" />';
+                    tag += '<div class="inner">';
+                    tag += '<h3 class="title">'+title+'</h3>';
+                    tag += '<h3 class="year">'+year+'</h3>';
+                    tag += '<ul class="genres">';
+                        for(var k in genres){
+                            tag += '<li>'+genres[k]+'</li>';
+                        }
+                    tag += '</ul>';
+                    tag += '<p class="summary">'+summary+'</p>';
+                    tag += '</div>';
+                    tag += '</div>';
+
+                }
+                
+
+            })
+        }
+
+        (function () {
+            ajax();
+        })();
+    </script>
+</body>
+
+</html>

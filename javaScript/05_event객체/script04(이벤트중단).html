@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {padding: 0;}
+        ul > li {list-style: none; display: inline-block; border: 1px solid #777; padding: 0 5px; }
+        a {text-decoration: none; color: black;}
+    </style>
+</head>
+<body>
+    <div>
+        <ul class="pageNation">
+            <li><a href="getList.board">1</a></li>
+            <li><a href="getList.board">2</a></li>
+            <li><a href="getList.board">3</a></li>
+        </ul>
+    </div>
+    <script>
+        var pageNation = document.querySelector(".pageNation");
+        pageNation.onclick = function(){
+            //a 태그의 실행 중지
+            event.preventDefault();
+            //a 태그에 원하는 이벤트 적용
+            if(event.target.tagName !="A") return;
+
+            var pageNum = event.target.innerHTML;
+            console.log(pageNum);
+        }
+
+    </script>
+</body>
+</html>

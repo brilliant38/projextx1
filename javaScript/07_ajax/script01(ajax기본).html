@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        fetch("hi.txt").then(function(response){
+            response.text().then(function(text){
+                alert(text);
+            })
+        })
+ */
+        //2가 1의 결과가 실행 완료 될 때까지 기다리지 않고 먼저 실행 됨.
+       /*  var promise = fetch("hi.txt").then(function(response){
+            //비동기 통신 성공, 실패에 대한 결과
+            console.log(response);
+            console.log(1);
+
+            //결과 내의 text함수 호출해서 문자화 시킴. then은 뭐지?
+            //text를 읽어서 then이라는 콜백 함수에 넣어주고 
+            //그 결과를 익명함수에 매개변수로 넣어 실행 한다.
+            response.text().then(function(data){
+                alert(data)
+            })
+        })
+        console.log(2); */
+        
+        /* fetch("hi.json").then(function(response){
+            //비동기 통신 성공, 실패에 대한 결과
+            console.log(response);
+            //통신 성공시 해당 json 파일을 data 객체화 시킴
+            response.json().then(function(data){ 
+                console.log(data.id)
+                console.log(data.name)
+            })
+        }) */
+
+        //가독성을 높인 구문
+        //1. 통신 확인
+        fetch("hi.json").then(function(response){
+            //2.json 객체 리턴
+            return response.json()
+            //3.json객체에서 data 확인
+        }).then(function(data){
+            //4.data에서 원하는 값 취득
+            console.log(data.id);
+        })
+    </script>
+</body>
+</html>

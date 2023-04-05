@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table id="mainTable" class="mainTable">
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>과정명</th>
+                <th>담당교수</th>
+                <th>관리</th>
+            </tr>
+        </thead>
+        <tbody class="tableList">
+            <tr>
+                <td>1</td>
+                <td>강남응용자바</td>
+                <td>홍길동</td>
+                <td>
+                    <button type="button" class="btn-primary testInfo">시험기본정보</button>
+                    <button type="button" class="btn-danger testInput">시험출제</button>
+                    <button type="button" class="btn-default testResult">시험결과</button>
+                    <button type="button" class="btn-info scoreInfo">성적관리</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>종로응용자바</td>
+                <td>홍길동</td>
+                <td>
+                    <button type="button" class="btn-primary testInfo">시험기본정보</button>
+                    <button type="button" class="btn-danger testInput">시험출제</button>
+                    <button type="button" class="btn-default testResult">시험결과</button>
+                    <button type="button" class="btn-info scoreInfo">성적관리</button>
+                </td>
+
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>수원응용자바</td>
+                <td>홍길동</td>
+                <td>
+                    <button type="button" class="btn-primary testInfo">시험기본정보</button>
+                    <button type="button" class="btn-danger testInput">시험출제</button>
+                    <button type="button" class="btn-default testResult">시험결과</button>
+                    <button type="button" class="btn-info scoreInfo">성적관리</button>
+                </td>
+
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>용인응용자바</td>
+                <td>홍길동</td>
+                <td>
+                    <button type="button" class="btn-primary testInfo">시험기본정보</button>
+                    <button type="button" class="btn-danger testInput">시험출제</button>
+                    <button type="button" class="btn-default testResult">시험결과</button>
+                    <button type="button" class="btn-info scoreInfo">성적관리</button>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+
+        var mainTable = document.getElementById("mainTable");
+        var tableList = mainTable.querySelector(".tableList");
+
+        tableList.onclick = function(){
+            console.log(event.target);
+            console.log(event.target.className);
+            console.log(event.target.classList);
+
+            var classList = event.target.classList;
+            //해당 객체 안에 문자열이 포함되어 있는지 확인.
+            if(classList.contains("testInfo")){
+                console.log("시험기본정보...");
+            }else if(classList.contains("testInput")){
+                console.log("시험출제...");
+            }else if(classList.contains("testResult")){
+                console.log("시험결과...");                
+            }else console.log("성적관리...");
+        }
+
+    </script>
+</body>
+</html>

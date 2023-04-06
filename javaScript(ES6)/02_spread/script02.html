@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const num = [1,2,3];
+
+        function sum(x,y,z){
+            return x + y + z;
+        }
+        //1,2,3이 각각 매개변수에 펼쳐져서 들어감
+        console.log(sum(...num)); //6
+        console.log(sum(10, ...num)); //10,1,2로 들어감 = 13
+
+        //함수의 매개변수의 적용(가변적 매개변수) - 단 마지막에 작성해야 합니다.
+        function sum2(x, ...arr){
+            return [x, ...arr];
+        }
+        console.log(sum2("홍길동",1));
+        console.log(sum2("홍길동",1,2));
+        console.log(sum2("홍길동",1,2,3,6,"hello"));
+
+        //함수의 디폴트 매개값
+        function sum3(x,y = 10,z=100){
+            //y가 입력 된 경우 입력 값으로 사용, 아닌경우 기본값 10으로 사용
+            return x + y + z;
+        }
+        console.log(sum3(1)); //111
+        console.log(sum3(1,2)); //103
+        console.log(sum3(1,2,3)); //6
+        console.log(sum3(...[1,2,3,4])); //6
+
+
+
+
+    </script>
+</body>
+</html>

@@ -6,6 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        ul,li {list-style: none;}
+        .mainTitle {text-align: center;}
+        .movieList {overflow: hidden; width 80%; margin: 0 auto;}
+        .movieList .movie {float: left;width 33.3333%; height: 300px; position: relative;}
+        .movie img {width: 100px; position: absolute; top: 0; left: 0;}
+
+        .inner {padding-left: 100px;}
+        .inner .genres li {display: inline-block;}
+        .inner .summary {overflow: scroll; height: 100px;}
+    </style>
 </head>
 
 <body>
@@ -44,7 +56,11 @@
                 //console.log(jsonData);
                 var movies = jsonData.data.movies;
 
+                var movieList = document.querySelector(".movieList");
+
                 var tag = "";
+                
+                //반복문으로 movieList 태그 내부에 삽입할 태그 양식 작성
 
                 for (var i = 0; i < movies.length; i++) {
                     var title = movies[i].title;
@@ -53,23 +69,26 @@
                     var summary = movies[i].summary;
                     var genres = movies[i].genres;
                     //console.log(title, year, img, summary, genres);
-
+                    
+                    //태그 작성
                     tag += '<div class="movie">';
                     tag += '<img src="'+ img +'" />';
                     tag += '<div class="inner">';
                     tag += '<h3 class="title">'+title+'</h3>';
                     tag += '<h3 class="year">'+year+'</h3>';
+                    //장르 여러개가 포함되므로 한번 더 돌린다.
                     tag += '<ul class="genres">';
                         for(var k in genres){
                             tag += '<li>'+genres[k]+'</li>';
                         }
-                    tag += '</ul>';
+                    
+                        tag += '</ul>';
                     tag += '<p class="summary">'+summary+'</p>';
                     tag += '</div>';
                     tag += '</div>';
-
                 }
-                
+                    
+                movieList.innerHTML = tag;
 
             })
         }

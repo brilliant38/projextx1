@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x = 1;
+        var x = 100;
+        console.log(x);
+
+        //ES6
+        //동일 let 변수의 선언 불가
+        //let y = 1;
+        //let y = 100;
+        
+        //var 변수가 변경되어도 처음 선언된 함수 전체까지 유효범위가 유지된다.
+        var x = 1;
+        if(true){
+            var x = 200;
+            console.log(x); //200
+        }
+        console.log(x); //200
+
+        //let은 새로운 중괄호 내에서만 변경 값이 적용된다.
+        let z = 1;
+        if(true){
+            let z = 100; 
+            console.log(z); //100
+        }
+        console.log(z); // 1
+
+
+    </script>
+</body>
+</html>

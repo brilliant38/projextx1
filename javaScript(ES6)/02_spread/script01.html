@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //console.log(...[1,2,3]);
+        const ARR = [1,2,3];
+        //console.log(...ARR);
+
+        //배열의 추가
+        const NUM1 = [10,20,30,ARR];
+        console.log(NUM1);
+        //스프레드 형태로 추가
+        const NUM2 = [10,20,30, ...ARR];
+        console.log(NUM2);
+        //배열의 중간 추가
+        const NUM3 = [10,20,...ARR,30];
+        console.log(NUM3)
+        //배열의 복사
+        const NUM4 = [...ARR];
+        console.log(NUM4);
+        //여러 배열을 합치기 (연결)
+        const NUM5 = [...ARR,...NUM1,...NUM2];
+        console.log(NUM5);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let obj = {"name" : "홍길동", "age":20};
+        
+        //console.log(obj["name"]);
+        //console.log(obj.name);
+
+        //let {name} = obj;
+        //console.log(name);
+        
+        //let {name,age} = obj;
+        //console.log(name,age);
+
+        //let {...arr} = obj;
+        //console.log(arr);
+
+        let person = {
+            "name" : "김철수",
+            "age" :30,
+            "job" : ["programmer","designer"],
+            "info" : {"id": "kkk123", "email":"namer"}
+        }
+
+        let {name,age,job} = person;
+        console.log(name,age, job);
+        
+        let {name:aaa} = person; //name을 aaa이름으로 꺼내오는 것
+        console.log(aaa);
+
+        let{age:bbb, job:xxx} = person;
+        console.log(bbb,xxx);
+
+    </script>
+</body>
+</html>

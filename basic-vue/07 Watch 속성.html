@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>뷰 기초 익히기</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+   
+</head>
+<body>
+    <div id="app">
+        {{message}}<br>
+        <button @click="changeMessage">Click</button><br>
+        {{updated}}
+
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                message :'HELLO',
+                updated :'아니요'
+            },
+            //실제 호출할 때마다 실행되므로 () 괄호 있어야 작동함
+            methods: {
+                changeMessage(){
+                    this.message = '코지코더';
+                }
+                /* reversedMessage(){
+                    return this.message.split('').reverse().join('')
+                } */
+            },
+            //선언시에 이미 실행 되어 있어서 추가 실행 하지 않고 계속 결과값만 반환
+            computed: { 
+                 reversedMessage(){
+                    return this.message.split('').reverse().join('')
+                }
+            },
+            //특정 변수의 값이 변경 될 때 실행 되는 함수.
+            watch: {
+                message(newVal,OldVal){
+                    console.log(newVal,OldVal);
+                    this.updated = '네';
+                }
+            }
+        })
+    </script>
+</body>
+</html>

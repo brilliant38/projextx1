@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>뷰 기초 익히기</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        .red {
+            color: red;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+       <!--  <template v-if="number === 1">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </template>
+        <div v-else-if="number === 2">Hi</div>
+        <div v-else>No</div> -->
+        <div v-show="show">Yes</div>
+        <br>
+        <button @click="toggle">Toggle</button>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                number: true,
+                show: false
+            },
+            methods: {
+               /*  toggleShow() {
+                    this.show = !this.show;
+                } */
+                increaseNumber(){
+                    this.number++;
+                },
+                toggle(){
+                    this.show = !this.show;
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>

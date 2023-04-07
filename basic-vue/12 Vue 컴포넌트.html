@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>뷰 기초 익히기</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        .red {
+            color: red;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+      <!--  {{name}}<br>
+       <button @click="changeText">Click</button>
+    <hr> -->
+        <manlu-Button></manlu-Button> <!-- 컴포넌트 부분을 이곳에 넣어 줌-->
+    </div>
+     <hr><hr>
+    <div id="app-1">
+        <!-- {{name}}<br>
+        <button @click="changeText">Click</button>
+
+        <hr> -->
+
+        <manlu-Button></manlu-Button>
+    </div> 
+    <script>
+        //컴포넌트 안에서 컴포넌트를 배치할 수도 있음.
+        Vue.component('hello-world', {
+            template:'<div>hello world</div>'
+        });
+        //전역 컴포넌트
+        /* Vue.component('manlu-Button',{
+            template:`
+            <div>
+                {{name}}<br>
+                <hello-world></hello-world>
+                <button @click="changeText">Click</button>
+            </div>
+            `,
+            //컴포넌트에서는 data부분을 함수로 만들어준다.
+            data() {
+                return {
+                    name: 'manlu'
+                }
+            },
+            methods: {
+                changeText(){
+                    this.name = 'manlu updated';
+                     
+                }
+            },
+        }); */
+
+        const HelloWorld = {
+            template: '<div>hello world</div>'
+        };
+
+        const ManluButton = {
+            components: {
+                'hello-world':HelloWorld
+            },
+            template: `
+            <div>
+                {{name}}<br>
+                <hello-world></hello-world>
+                <button @click="changeText">Click</button>
+            </div>
+            `,
+            //컴포넌트에서는 data부분을 함수로 만들어준다.
+            data() {
+                return {
+                    name: 'manlu'
+                }
+            },
+            methods: {
+                changeText(){
+                    this.name = 'manlu updated';
+                     
+                }
+            },
+        };
+
+        const app = new Vue({
+            el: '#app',
+            components: {
+                'manlu-Button':ManluButton
+            }
+            /* data: {
+                name: 'manlu'
+            },
+            methods: {
+                changeText(){
+                    this.name = 'manlu updated';
+                     
+                }
+            }, */
+        })
+        
+        const app1 = new Vue({
+            el: '#app-1',
+            components: {
+                'manlu-Button': ManluButton
+            }
+            /*  data: {
+                name: 'manlu'
+            },
+            methods: {
+                changeText(){
+                    this.name = 'manlu updated';
+                }
+            },  */
+        })
+    </script>
+</body>
+</html>

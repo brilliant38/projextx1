@@ -8,7 +8,7 @@ namespace HelloWorld.C_Sharp_Lecture
 {
     class WriteLineDemo1
     {
-        Static void main()
+        static void main()
         {
 
             Console.Write("명령 프롬프트에 출력할 내용");

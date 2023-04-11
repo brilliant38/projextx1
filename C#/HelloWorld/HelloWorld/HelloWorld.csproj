@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>HelloWorld.C_Sharp_Lecture.ExceptNumberDataType</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -43,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="C_Sharp_Lecture\Comment.cs" />
+    <Compile Include="C_Sharp_Lecture\ExceptNumberDataType.cs" />
+    <Compile Include="C_Sharp_Lecture\HelloWorld.cs" />
+    <Compile Include="C_Sharp_Lecture\IntegerDemo.cs" />
+    <Compile Include="C_Sharp_Lecture\PlaceHolder.cs" />
+    <Compile Include="C_Sharp_Lecture\PlaceHolderMulti.cs" />
+    <Compile Include="C_Sharp_Lecture\Quotes.cs" />
+    <Compile Include="C_Sharp_Lecture\TrueFalse.cs" />
+    <Compile Include="C_Sharp_Lecture\Variable.cs" />
+    <Compile Include="C_Sharp_Lecture\WhiteSpace.cs" />
+    <Compile Include="C_Sharp_Lecture\WriteAndWriteLine.cs" />
+    <Compile Include="C_Sharp_Lecture\WriteLine.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

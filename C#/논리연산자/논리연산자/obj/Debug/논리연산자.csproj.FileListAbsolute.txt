@@ -1,0 +1,6 @@
+C:\javaScript\projextx1\C#\논리연산자\논리연산자\bin\Debug\논리연산자.exe.config
+C:\javaScript\projextx1\C#\논리연산자\논리연산자\bin\Debug\논리연산자.exe
+C:\javaScript\projextx1\C#\논리연산자\논리연산자\bin\Debug\논리연산자.pdb
+C:\javaScript\projextx1\C#\논리연산자\논리연산자\obj\Debug\논리연산자.csproj.CoreCompileInputs.cache
+C:\javaScript\projextx1\C#\논리연산자\논리연산자\obj\Debug\논리연산자.exe
+C:\javaScript\projextx1\C#\논리연산자\논리연산자\obj\Debug\논리연산자.pdb

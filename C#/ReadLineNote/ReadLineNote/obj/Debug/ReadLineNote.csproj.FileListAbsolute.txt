@@ -1,0 +1,7 @@
+C:\Users\jera2\source\repos\ReadLineNote\ReadLineNote\bin\Debug\ReadLineNote.exe.config
+C:\Users\jera2\source\repos\ReadLineNote\ReadLineNote\bin\Debug\ReadLineNote.exe
+C:\Users\jera2\source\repos\ReadLineNote\ReadLineNote\bin\Debug\ReadLineNote.pdb
+C:\Users\jera2\source\repos\ReadLineNote\ReadLineNote\obj\Debug\ReadLineNote.csproj.AssemblyReference.cache
+C:\Users\jera2\source\repos\ReadLineNote\ReadLineNote\obj\Debug\ReadLineNote.csproj.CoreCompileInputs.cache
+C:\Users\jera2\source\repos\ReadLineNote\ReadLineNote\obj\Debug\ReadLineNote.exe
+C:\Users\jera2\source\repos\ReadLineNote\ReadLineNote\obj\Debug\ReadLineNote.pdb

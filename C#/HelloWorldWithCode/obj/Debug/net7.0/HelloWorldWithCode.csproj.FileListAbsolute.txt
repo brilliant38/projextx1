@@ -1,0 +1,15 @@
+C:\javaScript\projextx1\C#\HelloWorldWithCode\bin\Debug\net7.0\HelloWorldWithCode.exe
+C:\javaScript\projextx1\C#\HelloWorldWithCode\bin\Debug\net7.0\HelloWorldWithCode.deps.json
+C:\javaScript\projextx1\C#\HelloWorldWithCode\bin\Debug\net7.0\HelloWorldWithCode.runtimeconfig.json
+C:\javaScript\projextx1\C#\HelloWorldWithCode\bin\Debug\net7.0\HelloWorldWithCode.dll
+C:\javaScript\projextx1\C#\HelloWorldWithCode\bin\Debug\net7.0\HelloWorldWithCode.pdb
+C:\javaScript\projextx1\C#\HelloWorldWithCode\obj\Debug\net7.0\HelloWorldWithCode.csproj.AssemblyReference.cache
+C:\javaScript\projextx1\C#\HelloWorldWithCode\obj\Debug\net7.0\HelloWorldWithCode.GeneratedMSBuildEditorConfig.editorconfig
+C:\javaScript\projextx1\C#\HelloWorldWithCode\obj\Debug\net7.0\HelloWorldWithCode.AssemblyInfoInputs.cache
+C:\javaScript\projextx1\C#\HelloWorldWithCode\obj\Debug\net7.0\HelloWorldWithCode.AssemblyInfo.cs
+C:\javaScript\projextx1\C#\HelloWorldWithCode\obj\Debug\net7.0\HelloWorldWithCode.csproj.CoreCompileInputs.cache
+C:\javaScript\projextx1\C#\HelloWorldWithCode\obj\Debug\net7.0\HelloWorldWithCode.dll
+C:\javaScript\projextx1\C#\HelloWorldWithCode\obj\Debug\net7.0\refint\HelloWorldWithCode.dll
+C:\javaScript\projextx1\C#\HelloWorldWithCode\obj\Debug\net7.0\HelloWorldWithCode.pdb
+C:\javaScript\projextx1\C#\HelloWorldWithCode\obj\Debug\net7.0\HelloWorldWithCode.genruntimeconfig.cache
+C:\javaScript\projextx1\C#\HelloWorldWithCode\obj\Debug\net7.0\ref\HelloWorldWithCode.dll

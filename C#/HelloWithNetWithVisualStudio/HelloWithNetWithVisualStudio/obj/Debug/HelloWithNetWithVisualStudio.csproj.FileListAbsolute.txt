@@ -1,0 +1,7 @@
+C:\javaScript\projextx1\C#\HelloWithNetWithVisualStudio\HelloWithNetWithVisualStudio\bin\Debug\HelloWithNetWithVisualStudio.exe.config
+C:\javaScript\projextx1\C#\HelloWithNetWithVisualStudio\HelloWithNetWithVisualStudio\bin\Debug\HelloWithNetWithVisualStudio.exe
+C:\javaScript\projextx1\C#\HelloWithNetWithVisualStudio\HelloWithNetWithVisualStudio\bin\Debug\HelloWithNetWithVisualStudio.pdb
+C:\javaScript\projextx1\C#\HelloWithNetWithVisualStudio\HelloWithNetWithVisualStudio\obj\Debug\HelloWithNetWithVisualStudio.csproj.AssemblyReference.cache
+C:\javaScript\projextx1\C#\HelloWithNetWithVisualStudio\HelloWithNetWithVisualStudio\obj\Debug\HelloWithNetWithVisualStudio.csproj.CoreCompileInputs.cache
+C:\javaScript\projextx1\C#\HelloWithNetWithVisualStudio\HelloWithNetWithVisualStudio\obj\Debug\HelloWithNetWithVisualStudio.exe
+C:\javaScript\projextx1\C#\HelloWithNetWithVisualStudio\HelloWithNetWithVisualStudio\obj\Debug\HelloWithNetWithVisualStudio.pdb

@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'; //vuex에서 자동 객체 생성 기능.
+import { mapState, mapActions } from 'vuex'; //vuex에서 자동 객체 생성 기능.
 
 export default {
 
@@ -17,16 +17,17 @@ export default {
         this.getUsers();
     },
     computed:{
-        ...mapState({people:'users'})
+        /* ...mapState({
+            users: state => state.user.users
+        }) */
+        ...mapState('user', ['users'])
         /* users(){
             return this.$store.state.users;
         } */
 
     },
     methods:{
-        getUsers(){
-           this.$store.dispatch('getUsers');
-        }
+        ...mapActions('user', ['getUsers'])
     }
 
 }

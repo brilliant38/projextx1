@@ -19,15 +19,7 @@ export default {
     },
     computed:{
         todos(){
-            return this.$store.state.todos;
-        }
-    },
-    methods:{
-        toggleCheckBox(value){
-            this.$emit('toggle-checkbox', value);
-        },
-        deleteTodo(todoId){
-            this.$emit('click-delete', todoId);
+            return this.$store.state.todo.todos;
         }
     }
 }

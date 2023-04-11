@@ -18,7 +18,7 @@ export default {
     methods: {
         addTodo(e){
             //this.$store.commit('ADD_TODO', e.target.value); //mutations
-            this.$store.dispatch('addTodo',e.target.value); //actions
+            this.$store.dispatch('todoapp/addTodo',e.target.value); //actions
             this.todoText = '';
             //this.$emit('add-todo', e.target.value);
 

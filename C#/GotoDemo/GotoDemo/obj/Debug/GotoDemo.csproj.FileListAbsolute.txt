@@ -1,0 +1,6 @@
+C:\javaScript\projextx1\C#\GotoDemo\GotoDemo\bin\Debug\GotoDemo.exe.config
+C:\javaScript\projextx1\C#\GotoDemo\GotoDemo\bin\Debug\GotoDemo.exe
+C:\javaScript\projextx1\C#\GotoDemo\GotoDemo\bin\Debug\GotoDemo.pdb
+C:\javaScript\projextx1\C#\GotoDemo\GotoDemo\obj\Debug\GotoDemo.csproj.CoreCompileInputs.cache
+C:\javaScript\projextx1\C#\GotoDemo\GotoDemo\obj\Debug\GotoDemo.exe
+C:\javaScript\projextx1\C#\GotoDemo\GotoDemo\obj\Debug\GotoDemo.pdb

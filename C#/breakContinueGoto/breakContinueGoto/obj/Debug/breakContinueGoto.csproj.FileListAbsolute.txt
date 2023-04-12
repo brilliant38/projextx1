@@ -1,0 +1,6 @@
+C:\javaScript\projextx1\C#\breakContinueGoto\breakContinueGoto\bin\Debug\breakContinueGoto.exe.config
+C:\javaScript\projextx1\C#\breakContinueGoto\breakContinueGoto\bin\Debug\breakContinueGoto.exe
+C:\javaScript\projextx1\C#\breakContinueGoto\breakContinueGoto\bin\Debug\breakContinueGoto.pdb
+C:\javaScript\projextx1\C#\breakContinueGoto\breakContinueGoto\obj\Debug\breakContinueGoto.csproj.CoreCompileInputs.cache
+C:\javaScript\projextx1\C#\breakContinueGoto\breakContinueGoto\obj\Debug\breakContinueGoto.exe
+C:\javaScript\projextx1\C#\breakContinueGoto\breakContinueGoto\obj\Debug\breakContinueGoto.pdb

@@ -1,0 +1,6 @@
+C:\javaScript\projextx1\C#\forwhiledoforeach\forwhiledoforeach\bin\Debug\forwhiledoforeach.exe.config
+C:\javaScript\projextx1\C#\forwhiledoforeach\forwhiledoforeach\bin\Debug\forwhiledoforeach.exe
+C:\javaScript\projextx1\C#\forwhiledoforeach\forwhiledoforeach\bin\Debug\forwhiledoforeach.pdb
+C:\javaScript\projextx1\C#\forwhiledoforeach\forwhiledoforeach\obj\Debug\forwhiledoforeach.csproj.CoreCompileInputs.cache
+C:\javaScript\projextx1\C#\forwhiledoforeach\forwhiledoforeach\obj\Debug\forwhiledoforeach.exe
+C:\javaScript\projextx1\C#\forwhiledoforeach\forwhiledoforeach\obj\Debug\forwhiledoforeach.pdb

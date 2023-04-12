@@ -1,0 +1,6 @@
+C:\javaScript\projextx1\C#\Function\Function\bin\Debug\Function.exe.config
+C:\javaScript\projextx1\C#\Function\Function\bin\Debug\Function.exe
+C:\javaScript\projextx1\C#\Function\Function\bin\Debug\Function.pdb
+C:\javaScript\projextx1\C#\Function\Function\obj\Debug\Function.csproj.CoreCompileInputs.cache
+C:\javaScript\projextx1\C#\Function\Function\obj\Debug\Function.exe
+C:\javaScript\projextx1\C#\Function\Function\obj\Debug\Function.pdb

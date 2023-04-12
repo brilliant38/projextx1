@@ -1,0 +1,15 @@
+C:\javaScript\projextx1\C#\ShiftLeft\obj\Debug\net7.0\ShiftLeft.csproj.AssemblyReference.cache
+C:\javaScript\projextx1\C#\ShiftLeft\obj\Debug\net7.0\ShiftLeft.GeneratedMSBuildEditorConfig.editorconfig
+C:\javaScript\projextx1\C#\ShiftLeft\obj\Debug\net7.0\ShiftLeft.AssemblyInfoInputs.cache
+C:\javaScript\projextx1\C#\ShiftLeft\obj\Debug\net7.0\ShiftLeft.AssemblyInfo.cs
+C:\javaScript\projextx1\C#\ShiftLeft\obj\Debug\net7.0\ShiftLeft.csproj.CoreCompileInputs.cache
+C:\javaScript\projextx1\C#\ShiftLeft\bin\Debug\net7.0\ShiftLeft.exe
+C:\javaScript\projextx1\C#\ShiftLeft\bin\Debug\net7.0\ShiftLeft.deps.json
+C:\javaScript\projextx1\C#\ShiftLeft\bin\Debug\net7.0\ShiftLeft.runtimeconfig.json
+C:\javaScript\projextx1\C#\ShiftLeft\bin\Debug\net7.0\ShiftLeft.dll
+C:\javaScript\projextx1\C#\ShiftLeft\bin\Debug\net7.0\ShiftLeft.pdb
+C:\javaScript\projextx1\C#\ShiftLeft\obj\Debug\net7.0\ShiftLeft.dll
+C:\javaScript\projextx1\C#\ShiftLeft\obj\Debug\net7.0\refint\ShiftLeft.dll
+C:\javaScript\projextx1\C#\ShiftLeft\obj\Debug\net7.0\ShiftLeft.pdb
+C:\javaScript\projextx1\C#\ShiftLeft\obj\Debug\net7.0\ShiftLeft.genruntimeconfig.cache
+C:\javaScript\projextx1\C#\ShiftLeft\obj\Debug\net7.0\ref\ShiftLeft.dll

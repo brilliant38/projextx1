@@ -1,0 +1,6 @@
+C:\javaScript\projextx1\C#\else\else\bin\Debug\@else.exe.config
+C:\javaScript\projextx1\C#\else\else\bin\Debug\@else.exe
+C:\javaScript\projextx1\C#\else\else\bin\Debug\@else.pdb
+C:\javaScript\projextx1\C#\else\else\obj\Debug\else.csproj.CoreCompileInputs.cache
+C:\javaScript\projextx1\C#\else\else\obj\Debug\@else.exe
+C:\javaScript\projextx1\C#\else\else\obj\Debug\@else.pdb

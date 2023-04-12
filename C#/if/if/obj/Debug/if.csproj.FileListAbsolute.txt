@@ -1,0 +1,7 @@
+C:\javaScript\projextx1\C#\if\if\bin\Debug\@if.exe.config
+C:\javaScript\projextx1\C#\if\if\bin\Debug\@if.exe
+C:\javaScript\projextx1\C#\if\if\bin\Debug\@if.pdb
+C:\javaScript\projextx1\C#\if\if\obj\Debug\if.csproj.AssemblyReference.cache
+C:\javaScript\projextx1\C#\if\if\obj\Debug\if.csproj.CoreCompileInputs.cache
+C:\javaScript\projextx1\C#\if\if\obj\Debug\@if.exe
+C:\javaScript\projextx1\C#\if\if\obj\Debug\@if.pdb

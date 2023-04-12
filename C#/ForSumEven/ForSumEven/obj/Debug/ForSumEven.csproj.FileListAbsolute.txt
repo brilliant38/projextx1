@@ -1,0 +1,6 @@
+C:\javaScript\projextx1\C#\ForSumEven\ForSumEven\bin\Debug\ForSumEven.exe.config
+C:\javaScript\projextx1\C#\ForSumEven\ForSumEven\bin\Debug\ForSumEven.exe
+C:\javaScript\projextx1\C#\ForSumEven\ForSumEven\bin\Debug\ForSumEven.pdb
+C:\javaScript\projextx1\C#\ForSumEven\ForSumEven\obj\Debug\ForSumEven.csproj.CoreCompileInputs.cache
+C:\javaScript\projextx1\C#\ForSumEven\ForSumEven\obj\Debug\ForSumEven.exe
+C:\javaScript\projextx1\C#\ForSumEven\ForSumEven\obj\Debug\ForSumEven.pdb

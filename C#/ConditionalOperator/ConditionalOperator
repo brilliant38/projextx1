@@ -1,0 +1,10 @@
+using System;
+
+class ConditionalOperator{
+    static void Main(){
+        int n = 3;
+
+        String r = (n % 2 ==0) ? "짝수" : "홀수";
+        Console.WriteLine($"{n}는 {r}입니다.");
+    }
+}

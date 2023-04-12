@@ -1,0 +1,7 @@
+C:\javaScript\projextx1\C#\비트연산자\비트연산자\bin\Debug\비트연산자.exe.config
+C:\javaScript\projextx1\C#\비트연산자\비트연산자\bin\Debug\비트연산자.exe
+C:\javaScript\projextx1\C#\비트연산자\비트연산자\bin\Debug\비트연산자.pdb
+C:\javaScript\projextx1\C#\비트연산자\비트연산자\obj\Debug\비트연산자.csproj.AssemblyReference.cache
+C:\javaScript\projextx1\C#\비트연산자\비트연산자\obj\Debug\비트연산자.csproj.CoreCompileInputs.cache
+C:\javaScript\projextx1\C#\비트연산자\비트연산자\obj\Debug\비트연산자.exe
+C:\javaScript\projextx1\C#\비트연산자\비트연산자\obj\Debug\비트연산자.pdb

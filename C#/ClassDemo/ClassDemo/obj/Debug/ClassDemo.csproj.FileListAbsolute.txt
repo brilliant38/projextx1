@@ -1,0 +1,7 @@
+C:\javaScript\projextx1\C#\ClassDemo\ClassDemo\obj\Debug\ClassDemo.csproj.AssemblyReference.cache
+C:\javaScript\projextx1\C#\ClassDemo\ClassDemo\obj\Debug\ClassDemo.csproj.CoreCompileInputs.cache
+C:\javaScript\projextx1\C#\ClassDemo\ClassDemo\bin\Debug\ClassDemo.exe.config
+C:\javaScript\projextx1\C#\ClassDemo\ClassDemo\bin\Debug\ClassDemo.exe
+C:\javaScript\projextx1\C#\ClassDemo\ClassDemo\bin\Debug\ClassDemo.pdb
+C:\javaScript\projextx1\C#\ClassDemo\ClassDemo\obj\Debug\ClassDemo.exe
+C:\javaScript\projextx1\C#\ClassDemo\ClassDemo\obj\Debug\ClassDemo.pdb

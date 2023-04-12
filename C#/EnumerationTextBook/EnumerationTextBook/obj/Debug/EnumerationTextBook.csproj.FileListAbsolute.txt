@@ -1,0 +1,7 @@
+C:\javaScript\projextx1\C#\EnumerationTextBook\EnumerationTextBook\bin\Debug\EnumerationTextBook.exe.config
+C:\javaScript\projextx1\C#\EnumerationTextBook\EnumerationTextBook\bin\Debug\EnumerationTextBook.exe
+C:\javaScript\projextx1\C#\EnumerationTextBook\EnumerationTextBook\bin\Debug\EnumerationTextBook.pdb
+C:\javaScript\projextx1\C#\EnumerationTextBook\EnumerationTextBook\obj\Debug\EnumerationTextBook.csproj.AssemblyReference.cache
+C:\javaScript\projextx1\C#\EnumerationTextBook\EnumerationTextBook\obj\Debug\EnumerationTextBook.csproj.CoreCompileInputs.cache
+C:\javaScript\projextx1\C#\EnumerationTextBook\EnumerationTextBook\obj\Debug\EnumerationTextBook.exe
+C:\javaScript\projextx1\C#\EnumerationTextBook\EnumerationTextBook\obj\Debug\EnumerationTextBook.pdb

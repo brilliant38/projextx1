@@ -1,0 +1,7 @@
+C:\javaScript\projextx1\C#\DotnetAPI\DotnetAPI\bin\Debug\DotnetAPI.exe.config
+C:\javaScript\projextx1\C#\DotnetAPI\DotnetAPI\bin\Debug\DotnetAPI.exe
+C:\javaScript\projextx1\C#\DotnetAPI\DotnetAPI\bin\Debug\DotnetAPI.pdb
+C:\javaScript\projextx1\C#\DotnetAPI\DotnetAPI\obj\Debug\DotnetAPI.csproj.AssemblyReference.cache
+C:\javaScript\projextx1\C#\DotnetAPI\DotnetAPI\obj\Debug\DotnetAPI.csproj.CoreCompileInputs.cache
+C:\javaScript\projextx1\C#\DotnetAPI\DotnetAPI\obj\Debug\DotnetAPI.exe
+C:\javaScript\projextx1\C#\DotnetAPI\DotnetAPI\obj\Debug\DotnetAPI.pdb

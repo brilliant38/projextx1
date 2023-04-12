@@ -1,0 +1,15 @@
+C:\javaScript\projextx1\C#\StructDemo\obj\Debug\net7.0\StructDemo.csproj.AssemblyReference.cache
+C:\javaScript\projextx1\C#\StructDemo\obj\Debug\net7.0\StructDemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\javaScript\projextx1\C#\StructDemo\obj\Debug\net7.0\StructDemo.AssemblyInfoInputs.cache
+C:\javaScript\projextx1\C#\StructDemo\obj\Debug\net7.0\StructDemo.AssemblyInfo.cs
+C:\javaScript\projextx1\C#\StructDemo\obj\Debug\net7.0\StructDemo.csproj.CoreCompileInputs.cache
+C:\javaScript\projextx1\C#\StructDemo\bin\Debug\net7.0\StructDemo.exe
+C:\javaScript\projextx1\C#\StructDemo\bin\Debug\net7.0\StructDemo.deps.json
+C:\javaScript\projextx1\C#\StructDemo\bin\Debug\net7.0\StructDemo.runtimeconfig.json
+C:\javaScript\projextx1\C#\StructDemo\bin\Debug\net7.0\StructDemo.dll
+C:\javaScript\projextx1\C#\StructDemo\bin\Debug\net7.0\StructDemo.pdb
+C:\javaScript\projextx1\C#\StructDemo\obj\Debug\net7.0\StructDemo.dll
+C:\javaScript\projextx1\C#\StructDemo\obj\Debug\net7.0\refint\StructDemo.dll
+C:\javaScript\projextx1\C#\StructDemo\obj\Debug\net7.0\StructDemo.pdb
+C:\javaScript\projextx1\C#\StructDemo\obj\Debug\net7.0\StructDemo.genruntimeconfig.cache
+C:\javaScript\projextx1\C#\StructDemo\obj\Debug\net7.0\ref\StructDemo.dll

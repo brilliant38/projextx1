@@ -1,0 +1,6 @@
+C:\javaScript\projextx1\C#\StringTest\StringTest\bin\Debug\StringTest.exe.config
+C:\javaScript\projextx1\C#\StringTest\StringTest\bin\Debug\StringTest.exe
+C:\javaScript\projextx1\C#\StringTest\StringTest\bin\Debug\StringTest.pdb
+C:\javaScript\projextx1\C#\StringTest\StringTest\obj\Debug\StringTest.csproj.CoreCompileInputs.cache
+C:\javaScript\projextx1\C#\StringTest\StringTest\obj\Debug\StringTest.exe
+C:\javaScript\projextx1\C#\StringTest\StringTest\obj\Debug\StringTest.pdb

@@ -1,0 +1,6 @@
+C:\javaScript\projextx1\C#\ExceptionTest\ExceptionTest\bin\Debug\ExceptionTest.exe.config
+C:\javaScript\projextx1\C#\ExceptionTest\ExceptionTest\bin\Debug\ExceptionTest.exe
+C:\javaScript\projextx1\C#\ExceptionTest\ExceptionTest\bin\Debug\ExceptionTest.pdb
+C:\javaScript\projextx1\C#\ExceptionTest\ExceptionTest\obj\Debug\ExceptionTest.csproj.CoreCompileInputs.cache
+C:\javaScript\projextx1\C#\ExceptionTest\ExceptionTest\obj\Debug\ExceptionTest.exe
+C:\javaScript\projextx1\C#\ExceptionTest\ExceptionTest\obj\Debug\ExceptionTest.pdb

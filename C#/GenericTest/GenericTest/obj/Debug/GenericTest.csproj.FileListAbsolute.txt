@@ -1,0 +1,6 @@
+C:\javaScript\projextx1\C#\GenericTest\GenericTest\bin\Debug\GenericTest.exe.config
+C:\javaScript\projextx1\C#\GenericTest\GenericTest\bin\Debug\GenericTest.exe
+C:\javaScript\projextx1\C#\GenericTest\GenericTest\bin\Debug\GenericTest.pdb
+C:\javaScript\projextx1\C#\GenericTest\GenericTest\obj\Debug\GenericTest.csproj.CoreCompileInputs.cache
+C:\javaScript\projextx1\C#\GenericTest\GenericTest\obj\Debug\GenericTest.exe
+C:\javaScript\projextx1\C#\GenericTest\GenericTest\obj\Debug\GenericTest.pdb

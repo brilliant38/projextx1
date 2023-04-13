@@ -1,0 +1,6 @@
+C:\javaScript\projextx1\C#\CollectionTest\CollectionTest\bin\Debug\CollectionTest.exe.config
+C:\javaScript\projextx1\C#\CollectionTest\CollectionTest\bin\Debug\CollectionTest.exe
+C:\javaScript\projextx1\C#\CollectionTest\CollectionTest\bin\Debug\CollectionTest.pdb
+C:\javaScript\projextx1\C#\CollectionTest\CollectionTest\obj\Debug\CollectionTest.csproj.CoreCompileInputs.cache
+C:\javaScript\projextx1\C#\CollectionTest\CollectionTest\obj\Debug\CollectionTest.exe
+C:\javaScript\projextx1\C#\CollectionTest\CollectionTest\obj\Debug\CollectionTest.pdb

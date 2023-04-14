@@ -1,0 +1,6 @@
+C:\javaScript\projextx1\C#\ObjectTest\ObjectTest\bin\Debug\ObjectTest.exe.config
+C:\javaScript\projextx1\C#\ObjectTest\ObjectTest\bin\Debug\ObjectTest.exe
+C:\javaScript\projextx1\C#\ObjectTest\ObjectTest\bin\Debug\ObjectTest.pdb
+C:\javaScript\projextx1\C#\ObjectTest\ObjectTest\obj\Debug\ObjectTest.csproj.CoreCompileInputs.cache
+C:\javaScript\projextx1\C#\ObjectTest\ObjectTest\obj\Debug\ObjectTest.exe
+C:\javaScript\projextx1\C#\ObjectTest\ObjectTest\obj\Debug\ObjectTest.pdb

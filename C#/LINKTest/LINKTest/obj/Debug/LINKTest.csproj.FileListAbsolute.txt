@@ -1,0 +1,7 @@
+C:\Users\jera2\source\repos\LINKTest\LINKTest\bin\Debug\LINKTest.exe.config
+C:\Users\jera2\source\repos\LINKTest\LINKTest\bin\Debug\LINKTest.exe
+C:\Users\jera2\source\repos\LINKTest\LINKTest\bin\Debug\LINKTest.pdb
+C:\Users\jera2\source\repos\LINKTest\LINKTest\obj\Debug\LINKTest.csproj.AssemblyReference.cache
+C:\Users\jera2\source\repos\LINKTest\LINKTest\obj\Debug\LINKTest.csproj.CoreCompileInputs.cache
+C:\Users\jera2\source\repos\LINKTest\LINKTest\obj\Debug\LINKTest.exe
+C:\Users\jera2\source\repos\LINKTest\LINKTest\obj\Debug\LINKTest.pdb

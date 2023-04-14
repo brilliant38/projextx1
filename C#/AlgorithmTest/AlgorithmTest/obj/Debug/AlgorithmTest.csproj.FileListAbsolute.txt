@@ -1,0 +1,7 @@
+C:\javaScript\projextx1\C#\AlgorithmTest\AlgorithmTest\bin\Debug\AlgorithmTest.exe.config
+C:\javaScript\projextx1\C#\AlgorithmTest\AlgorithmTest\bin\Debug\AlgorithmTest.exe
+C:\javaScript\projextx1\C#\AlgorithmTest\AlgorithmTest\bin\Debug\AlgorithmTest.pdb
+C:\javaScript\projextx1\C#\AlgorithmTest\AlgorithmTest\obj\Debug\AlgorithmTest.csproj.AssemblyReference.cache
+C:\javaScript\projextx1\C#\AlgorithmTest\AlgorithmTest\obj\Debug\AlgorithmTest.csproj.CoreCompileInputs.cache
+C:\javaScript\projextx1\C#\AlgorithmTest\AlgorithmTest\obj\Debug\AlgorithmTest.exe
+C:\javaScript\projextx1\C#\AlgorithmTest\AlgorithmTest\obj\Debug\AlgorithmTest.pdb

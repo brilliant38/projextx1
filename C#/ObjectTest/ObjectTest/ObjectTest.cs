@@ -17,6 +17,16 @@ namespace ObjectTest
         public override string ToString() => "My Car";
     }
 
+    public class ClassOne
+    {
+        public static void Hi() => Console.WriteLine("Hi");
+    }
+    
+    public class ClassTwo
+    {
+        public void Hi() => Console.WriteLine("Hi");
+    }
+
     class ObjectTest
     {
         static void Main(string[] args)
@@ -35,7 +45,13 @@ namespace ObjectTest
 
             car1.Go();
             car2.Go();
-            
+
+            //정적 메소드 추가 객체 생성 필요없음
+            ClassOne.Hi();
+
+            //인스턴스 메소드 추가 객체 생성 해야함
+            ClassTwo two = new ClassTwo();
+            two.Hi();
 
 
         }

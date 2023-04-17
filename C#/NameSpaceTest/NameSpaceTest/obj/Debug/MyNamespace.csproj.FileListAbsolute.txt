@@ -1,0 +1,7 @@
+C:\javaScript\projextx1\C#\NameSpaceTest\NameSpaceTest\bin\Debug\NameSpaceTest.exe.config
+C:\javaScript\projextx1\C#\NameSpaceTest\NameSpaceTest\bin\Debug\NameSpaceTest.exe
+C:\javaScript\projextx1\C#\NameSpaceTest\NameSpaceTest\bin\Debug\NameSpaceTest.pdb
+C:\javaScript\projextx1\C#\NameSpaceTest\NameSpaceTest\obj\Debug\MyNamespace.csproj.AssemblyReference.cache
+C:\javaScript\projextx1\C#\NameSpaceTest\NameSpaceTest\obj\Debug\MyNamespace.csproj.CoreCompileInputs.cache
+C:\javaScript\projextx1\C#\NameSpaceTest\NameSpaceTest\obj\Debug\NameSpaceTest.exe
+C:\javaScript\projextx1\C#\NameSpaceTest\NameSpaceTest\obj\Debug\NameSpaceTest.pdb

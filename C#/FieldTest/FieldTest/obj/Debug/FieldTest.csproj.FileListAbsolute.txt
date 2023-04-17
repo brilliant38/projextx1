@@ -1,0 +1,7 @@
+C:\javaScript\projextx1\C#\FieldTest\FieldTest\bin\Debug\FieldTest.exe.config
+C:\javaScript\projextx1\C#\FieldTest\FieldTest\bin\Debug\FieldTest.exe
+C:\javaScript\projextx1\C#\FieldTest\FieldTest\bin\Debug\FieldTest.pdb
+C:\javaScript\projextx1\C#\FieldTest\FieldTest\obj\Debug\FieldTest.csproj.AssemblyReference.cache
+C:\javaScript\projextx1\C#\FieldTest\FieldTest\obj\Debug\FieldTest.csproj.CoreCompileInputs.cache
+C:\javaScript\projextx1\C#\FieldTest\FieldTest\obj\Debug\FieldTest.exe
+C:\javaScript\projextx1\C#\FieldTest\FieldTest\obj\Debug\FieldTest.pdb

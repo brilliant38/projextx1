@@ -1,0 +1,7 @@
+C:\javaScript\projextx1\C#\GarbageTest\GarbageTest\bin\Debug\GarbageTest.exe.config
+C:\javaScript\projextx1\C#\GarbageTest\GarbageTest\bin\Debug\GarbageTest.exe
+C:\javaScript\projextx1\C#\GarbageTest\GarbageTest\bin\Debug\GarbageTest.pdb
+C:\javaScript\projextx1\C#\GarbageTest\GarbageTest\obj\Debug\GarbageTest.csproj.AssemblyReference.cache
+C:\javaScript\projextx1\C#\GarbageTest\GarbageTest\obj\Debug\GarbageTest.csproj.CoreCompileInputs.cache
+C:\javaScript\projextx1\C#\GarbageTest\GarbageTest\obj\Debug\GarbageTest.exe
+C:\javaScript\projextx1\C#\GarbageTest\GarbageTest\obj\Debug\GarbageTest.pdb

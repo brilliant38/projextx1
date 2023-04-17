@@ -1,0 +1,7 @@
+C:\javaScript\projextx1\C#\DelegateTest\DelegateTest\bin\Debug\DelegateTest.exe.config
+C:\javaScript\projextx1\C#\DelegateTest\DelegateTest\bin\Debug\DelegateTest.exe
+C:\javaScript\projextx1\C#\DelegateTest\DelegateTest\bin\Debug\DelegateTest.pdb
+C:\javaScript\projextx1\C#\DelegateTest\DelegateTest\obj\Debug\DelegateTest.csproj.CoreCompileInputs.cache
+C:\javaScript\projextx1\C#\DelegateTest\DelegateTest\obj\Debug\DelegateTest.exe
+C:\javaScript\projextx1\C#\DelegateTest\DelegateTest\obj\Debug\DelegateTest.pdb
+C:\javaScript\projextx1\C#\DelegateTest\DelegateTest\obj\Debug\DelegateTest.csproj.AssemblyReference.cache

@@ -1,0 +1,6 @@
+C:\javaScript\projextx1\C#\PropertyTest\PropertyTest\obj\Debug\PropertyTest.csproj.CoreCompileInputs.cache
+C:\javaScript\projextx1\C#\PropertyTest\PropertyTest\bin\Debug\PropertyTest.exe.config
+C:\javaScript\projextx1\C#\PropertyTest\PropertyTest\bin\Debug\PropertyTest.exe
+C:\javaScript\projextx1\C#\PropertyTest\PropertyTest\bin\Debug\PropertyTest.pdb
+C:\javaScript\projextx1\C#\PropertyTest\PropertyTest\obj\Debug\PropertyTest.exe
+C:\javaScript\projextx1\C#\PropertyTest\PropertyTest\obj\Debug\PropertyTest.pdb

@@ -1,0 +1,6 @@
+C:\javaScript\projextx1\C#\IndexerAndIterator\IndexerAndIterator\obj\Debug\IndexerAndIterator.csproj.CoreCompileInputs.cache
+C:\javaScript\projextx1\C#\IndexerAndIterator\IndexerAndIterator\bin\Debug\IndexerAndIterator.exe.config
+C:\javaScript\projextx1\C#\IndexerAndIterator\IndexerAndIterator\bin\Debug\IndexerAndIterator.exe
+C:\javaScript\projextx1\C#\IndexerAndIterator\IndexerAndIterator\bin\Debug\IndexerAndIterator.pdb
+C:\javaScript\projextx1\C#\IndexerAndIterator\IndexerAndIterator\obj\Debug\IndexerAndIterator.exe
+C:\javaScript\projextx1\C#\IndexerAndIterator\IndexerAndIterator\obj\Debug\IndexerAndIterator.pdb

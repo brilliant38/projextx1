@@ -1,0 +1,7 @@
+C:\javaScript\projextx1\C#\MethodUsingTest\MethodUsingTest\bin\Debug\MethodUsingTest.exe.config
+C:\javaScript\projextx1\C#\MethodUsingTest\MethodUsingTest\bin\Debug\MethodUsingTest.exe
+C:\javaScript\projextx1\C#\MethodUsingTest\MethodUsingTest\bin\Debug\MethodUsingTest.pdb
+C:\javaScript\projextx1\C#\MethodUsingTest\MethodUsingTest\obj\Debug\MethodUsingTest.csproj.AssemblyReference.cache
+C:\javaScript\projextx1\C#\MethodUsingTest\MethodUsingTest\obj\Debug\MethodUsingTest.csproj.CoreCompileInputs.cache
+C:\javaScript\projextx1\C#\MethodUsingTest\MethodUsingTest\obj\Debug\MethodUsingTest.exe
+C:\javaScript\projextx1\C#\MethodUsingTest\MethodUsingTest\obj\Debug\MethodUsingTest.pdb

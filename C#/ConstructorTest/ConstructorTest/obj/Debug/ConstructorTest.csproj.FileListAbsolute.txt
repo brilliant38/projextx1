@@ -1,0 +1,7 @@
+C:\javaScript\projextx1\C#\ConstructorTest\ConstructorTest\bin\Debug\ConstructorTest.exe.config
+C:\javaScript\projextx1\C#\ConstructorTest\ConstructorTest\bin\Debug\ConstructorTest.exe
+C:\javaScript\projextx1\C#\ConstructorTest\ConstructorTest\bin\Debug\ConstructorTest.pdb
+C:\javaScript\projextx1\C#\ConstructorTest\ConstructorTest\obj\Debug\ConstructorTest.csproj.CoreCompileInputs.cache
+C:\javaScript\projextx1\C#\ConstructorTest\ConstructorTest\obj\Debug\ConstructorTest.exe
+C:\javaScript\projextx1\C#\ConstructorTest\ConstructorTest\obj\Debug\ConstructorTest.pdb
+C:\javaScript\projextx1\C#\ConstructorTest\ConstructorTest\obj\Debug\ConstructorTest.csproj.AssemblyReference.cache

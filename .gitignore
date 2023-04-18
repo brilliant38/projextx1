@@ -23,3 +23,10 @@
 .vs/
 .bin/
 .obj/
+*.sln
+*.config
+*.exe
+*.pdb
+*.csproj
+*.cache
+*.txt

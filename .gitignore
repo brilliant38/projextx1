@@ -30,3 +30,5 @@
 *.csproj
 *.cache
 *.txt
+AssemblyAttributes.cs
+AssemblyInfo.cs

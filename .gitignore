@@ -38,6 +38,7 @@
 *.resources
 *.AssemblyAttributes.cs
 *.AssemblyInfo.cs
+AssemblyInfo.cs
 Program.cs
 *.resx
 *.Designer.cs

@@ -30,5 +30,11 @@
 *.csproj
 *.cache
 *.txt
+*.json
+*.dll
+*.targets
+*.props
+*.CopyComplete
+*.resources
 .NETFramework,Version=v4.7.2.AssemblyAttributes.cs
 AssemblyInfo.cs

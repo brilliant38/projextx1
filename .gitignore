@@ -36,5 +36,9 @@
 *.props
 *.CopyComplete
 *.resources
-.NETFramework,Version=v4.7.2.AssemblyAttributes.cs
-AssemblyInfo.cs
+*.AssemblyAttributes.cs
+*.AssemblyInfo.cs
+Program.cs
+*.resx
+*.Designer.cs
+*.user

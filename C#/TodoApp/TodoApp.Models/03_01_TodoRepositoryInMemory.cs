@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace TodoApp.Models
 {
-    public class TodoRepositoryInMemory : ITodoRepositoryInMemory
+    public class TodoRepositoryInMemory : ITodoRepository
     {
         private static List<Todo> _todos = new List<Todo>();
 

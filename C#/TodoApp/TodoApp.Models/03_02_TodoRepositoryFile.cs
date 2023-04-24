@@ -23,11 +23,12 @@ namespace TodoApp.Models
 
         public TodoRepositoryFile(string filePath = @"C:\sw\Todos.txt")
         {
+            this._filePath = filePath;
             string[] todos = File.ReadAllLines(filePath, Encoding.Default);
             foreach (var t in todos)
             {
                 string[] line = t.Split(',');//,기준 라인 단위로 구분 필요
-                _todos.Add(new Todo { Id = Convert.ToInt32(line[0]), Title = line[1], IsDone = Convert.ToBoolean(line[2])});
+                _todos.Add(new Todo { Id = Convert.ToInt32(line[0]), Title = line[1], IsDone = Convert.ToBoolean(line[2]) });
             }
         }
 
@@ -63,6 +64,4 @@ namespace TodoApp.Models
             return _todos.ToList();
         }
     }
-
-
 }

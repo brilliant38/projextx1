@@ -15,23 +15,18 @@ using System.Windows.Shapes;
 namespace FirstApp
 {
     /// <summary>
-    /// ch6.xaml에 대한 상호 작용 논리
+    /// ch8.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class ch6 : Window
+    public partial class ch8 : Window
     {
-        public ch6()
+        public ch8()
         {
             InitializeComponent();
         }
 
-        private void btn1_Click(object sender, RoutedEventArgs e)
+        private void txt_KeyDown(object sender, KeyEventArgs e)
         {
-            MessageBox.Show("클릭");
-        }
-
-        private void Button_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            MessageBox.Show("더블클릭");
+            if(e.Key == Key.Enter) MessageBox.Show(txt.Text);
         }
     }
 }

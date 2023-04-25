@@ -6,13 +6,50 @@
         xmlns:local="clr-namespace:FirstApp"
         mc:Ignorable="d"
         Title="ch6" Height="450" Width="800">
-    <StackPanel>
+    <StackPanel VerticalAlignment="Center">
         <Button 
             Background="Salmon"
             Foreground="White"
             ToolTip="정보표시"
-                >버튼1</Button>
-        <Button></Button>
-        <Button></Button>
+            Width="100"
+            Height="100"
+            Name="btn1"
+            Click="btn1_Click"
+            >버튼1</Button>
+        <Button
+            Background="Coral"
+            Foreground="White"
+            Width="200"
+            Height="100"
+            MouseDoubleClick="Button_MouseDoubleClick"
+            >버튼2
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="100"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button
+            Background="Coral"
+            Foreground="White"
+            Width="200"
+            Height="100"
+            MouseDoubleClick="Button_MouseDoubleClick"
+            >버튼2
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="100"></Setter>
+                </Style>
+            </Button.Resources>
+            <Button.Effect>
+                <DropShadowEffect
+                    ShadowDepth="10"
+                    Direction="330"
+                    Color="Black"
+                    Opacity="0.5"
+                    BlurRadius="10"
+                    />
+            </Button.Effect>
+        </Button>
     </StackPanel>
 </Window>

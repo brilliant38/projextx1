@@ -1,0 +1,31 @@
+﻿<Window x:Class="ListBoxLINQBindingWPF.SubWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ListBoxLINQBindingWPF"
+        mc:Ignorable="d"
+        Title="SubWindow" Height="300" Width="300">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock FontSize="20" Grid.ColumnSpan="3" HorizontalAlignment="Center"
+                   VerticalAlignment="Center">직무 등록</TextBlock>
+        <TextBlock Grid.Row="1" Margin="10" VerticalAlignment="Center">직무명</TextBlock>
+        <TextBox x:Name="txtDutyName" Grid.Row="1" Margin="10" Grid.Column="1" Grid.ColumnSpan="2"></TextBox>
+        <TextBlock Margin="10" Grid.Row="2" VerticalAlignment="Center">직무타입</TextBlock>
+        <RadioButton x:Name="rdolnner" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <RadioButton x:Name="rdoOutSider" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button Grid.Column="1" Grid.Row="3" Width="100" HorizontalAlignment="Center"
+                Click="Button_Click" Height="22">저장</Button>
+    </Grid>
+</Window>

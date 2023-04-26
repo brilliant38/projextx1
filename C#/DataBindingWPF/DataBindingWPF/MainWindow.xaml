@@ -6,7 +6,21 @@
         xmlns:local="clr-namespace:DataBindingWPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <!--<StackPanel Orientation="Vertical" Margin="20" >
+        <Label Content="Which city do you love?"/>
+        <CheckBox Content="SEOUL" IsChecked="{Binding Seoul}"/>
+        <CheckBox Content="JEJU" IsChecked="{Binding Jeju}"/>
+        <CheckBox Content="INCHEON" IsChecked="{Binding Incheon}"/>
+        <Button Content="제출" Click="Summit_Click" Width="50" HorizontalAlignment="Left"/>
+    </StackPanel>-->
+
+    <StackPanel Orientation="Vertical" Margin="20">
+        <!--소스-->
+        <TextBox Name="txt1" Text="{Binding Path=Text, Mode=TwoWay}"/>
         
-    </Grid>
+        <!--타겟-->
+        <TextBox Name="txt2"
+                 Text="{Binding Source={x:Reference txt1},Path=Text,
+            UpdateSourceTrigger=PropertyChanged}"/> <!--타겟에서도 양방향 바인딩 하려면 트리거가 필요함 -->
+    </StackPanel>
 </Window>

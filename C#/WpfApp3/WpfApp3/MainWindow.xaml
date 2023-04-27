@@ -1,0 +1,29 @@
+﻿<Window x:Class="WpfApp3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <StackPanel>
+        <!-- Source -->
+        <!--텍스트박스가 타겟-->
+        <TextBox Margin="24" Text="{Binding ElementName=label,Path=Content,
+            UpdateSourceTrigger=PropertyChanged, Mode=OneWayToSource}"
+                 />
+        
+        <!--Target -->
+        <!--<Label HorizontalAlignment="Center" BorderBrush="Black"
+               BorderThickness="2"
+               Content="{Binding ElementName=txt1, Path=Text}"/>-->
+        <!--<Label HorizontalAlignment="Center" BorderBrush="Black"
+               BorderThickness="2"
+               Content="{Binding ElementName=txt1, Path=Text,Mode=OneTime}"
+               />-->
+        <!--라벨이 소스-->
+        <Label Name="label" Content="대한민국"
+               HorizontalAlignment="Center" BorderBrush="Black" BorderThickness="2"/>
+
+    </StackPanel>
+</Window>

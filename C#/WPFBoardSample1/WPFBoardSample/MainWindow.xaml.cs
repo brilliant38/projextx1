@@ -86,14 +86,15 @@ namespace WPFBoardSample
             using (var streamReader = new StreamReader(response.GetResponseStream()))
             {
                 var jsonResult = streamReader.ReadToEnd();
-                Console.WriteLine(jsonResult.ToString());
+                //Console.WriteLine(jsonResult.ToString());
                 // 서버 응답 데이터를 TextBox에 뿌리기
-                this.txtRepData.Text = jsonResult.ToString();
+                //this.txtRepData.Text = jsonResult.ToString();
 
                 var datas = JsonConvert.DeserializeObject(jsonResult);
                 JObject jObject = JObject.Parse(jsonResult);
 
                 //Console.WriteLine("jObject 체크 :" + jObject.ToString());
+
 
                 // Header를 위한 Row 추가 
                 RowColumDefinitions(this.gridBoardList);
@@ -101,6 +102,7 @@ namespace WPFBoardSample
                 GridHeadAdd(this.gridBoardList);
                 // 게시물 데이터를 위한 Row 추가
                 //RowColumDefinitions(this.gridBoardList);
+                
                 // 게시물 데이터 표기
                 ChildrenAdd(this.gridBoardList, jObject);
 
@@ -170,11 +172,13 @@ namespace WPFBoardSample
         /// <param name="jObject"></param>
         private void ChildrenAdd(Grid grid, JObject jObject)
         {
-            Console.WriteLine($"bizActor로부터 받아온 객체 : \n grid : {grid} + \n Jobject: {jObject}");
+            //Console.WriteLine($"bizActor로부터 받아온 객체 : \n grid : {grid} + \n Jobject: {jObject}");
 
 
             foreach (var item in jObject["result"]["OUT_BRBoard_sel"])
             {
+                
+
                 RowDefinition boardList = new RowDefinition();
                 boardList.Height = new GridLength(40, GridUnitType.Pixel);
                 grid.RowDefinitions.Add(boardList);
